@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    private MovementComponent _movementComponent;
     [SerializeField]
     private float _distance;
     [SerializeField]
@@ -31,16 +30,15 @@ public class FollowCamera : MonoBehaviour
     /// </summary>
     void Start()
     {
+        Screen.SetResolution(1024, 768, true);
         _myTransform = transform;
-        _movementComponent = FindObjectOfType<MovementComponent>();
-        
     }
     /// <summary>
     /// Updates camera position
     /// </summary>
     void LateUpdate()
     {
-        if (_movementComponent.MoveCamera && _cameraTransform.position.x < _targetTransform.position.x + 0.001 )
+        if (_cameraTransform.position.x < _targetTransform.position.x + 0.001 )
         {
             Vector3 _desiredPosition = _targetTransform.position + new Vector3(_horizontalOffset, 0, -_distance);
             _desiredPosition.y = _verticalOffset;

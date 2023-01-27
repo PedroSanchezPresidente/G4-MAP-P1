@@ -1,0 +1,275 @@
+Using pre-set license
+Built from '2022.1/staging' branch; Version is '2022.1.14f1 (ff7e140968b4) revision 16743956'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'es' Physical Memory: 15754 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Unity\2022.1.14f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/migue/OneDrive/Documentos/GitHub/G4-MAP-P1
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+56319
+Successfully changed project path to: C:/Users/migue/OneDrive/Documentos/GitHub/G4-MAP-P1
+C:/Users/migue/OneDrive/Documentos/GitHub/G4-MAP-P1
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 44.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.14f1 (ff7e140968b4)
+[Subsystems] Discovering subsystems at path C:/Unity/2022.1.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/migue/OneDrive/Documentos/GitHub/G4-MAP-P1/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Radeon RX 5500M (ID=0x7340)
+    Vendor:   ATI
+    VRAM:     4055 MB
+    Driver:   27.20.14048.3001
+Initialize mono
+Mono path[0] = 'C:/Unity/2022.1.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Unity/2022.1.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Unity/2022.1.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Unity/2022.1.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004591 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.598 seconds
+Domain Reload Profiling:
+	ReloadAssembly (598ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (419ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (101ms)
+				TypeCache.Initialize (100ms)
+					TypeCache.ScanAssembly (99ms)
+				ResolveRequiredComponents (1ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (234ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (7ms)
+				RefreshPlugins (41ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (133ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005585 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 36.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.939 seconds
+Domain Reload Profiling:
+	ReloadAssembly (940ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (722ms)
+			LoadAssemblies (81ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (177ms)
+				TypeCache.Initialize (174ms)
+					TypeCache.ScanAssembly (170ms)
+				ResolveRequiredComponents (2ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (377ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (7ms)
+				RefreshPlugins (37ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (217ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2533 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (58.2 KB). Loaded Objects now: 2995.
+Memory consumption went from 416.2 MB to 416.1 MB.
+Total: 3.377800 ms (FindLiveObjects: 0.240300 ms CreateObjectMapping: 0.084600 ms MarkObjects: 2.968200 ms  DeleteObjects: 0.083000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 647.470612 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_129.asset
+  artifactKey: Guid(fcffe020edb0bd849ba4c161bfed5c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_129.asset using Guid(fcffe020edb0bd849ba4c161bfed5c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4813828c3b4a52b6284a674cdde524b') in 0.075950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_127.asset
+  artifactKey: Guid(ba0d13cc9d33ba34b9891d5cf8923820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_127.asset using Guid(ba0d13cc9d33ba34b9891d5cf8923820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8760b5429b9c2d8b2aa642ea157c7ce') in 0.009904 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_141.asset
+  artifactKey: Guid(ff69e8072ae56544fa25fde62e55dc62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_141.asset using Guid(ff69e8072ae56544fa25fde62e55dc62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a0fe5288d2434175e36a67e3f1257a3') in 0.007464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_142.asset
+  artifactKey: Guid(161b7e0f4f6ca694a87f9cdc25860d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_142.asset using Guid(161b7e0f4f6ca694a87f9cdc25860d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98f4f1a99bbbe18595525e2ab1c644dd') in 0.008218 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_154.asset
+  artifactKey: Guid(9546fadd86aed4942a2766a00d1f3462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_154.asset using Guid(9546fadd86aed4942a2766a00d1f3462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13f7899f587e52a5aa8f51203de671db') in 0.007511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_155.asset
+  artifactKey: Guid(a296fcd1fe8bbb843a1579a67699b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_155.asset using Guid(a296fcd1fe8bbb843a1579a67699b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a5ceb29a640fcf2e2bdaaca93a7242') in 0.006858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Materials/Tileset/blocks/blocksSpriteSheet_119.asset
+  artifactKey: Guid(e2a45657daca40e469115133435bdd98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/blocks/blocksSpriteSheet_119.asset using Guid(e2a45657daca40e469115133435bdd98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38ff5583002fb9084391242dc74e00a6') in 0.007080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.886699 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings/pipes+buildings.png
+  artifactKey: Guid(b2af69d48a123cb418436ee729596118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings/pipes+buildings.png using Guid(b2af69d48a123cb418436ee729596118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b86cf6ad597545c773c8524c99ba7c4') in 0.095217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.656182 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings.png
+  artifactKey: Guid(a2e7979d9db919544b06731284f80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings.png using Guid(a2e7979d9db919544b06731284f80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741cd75b59e4fd1fe4e4b2545ab9a42f') in 0.038116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.917549 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings.png
+  artifactKey: Guid(a2e7979d9db919544b06731284f80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings.png using Guid(a2e7979d9db919544b06731284f80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e02c427d3b416ee2d07cf75f439eb38c') in 0.012594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 155.154255 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings.png
+  artifactKey: Guid(a2e7979d9db919544b06731284f80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings.png using Guid(a2e7979d9db919544b06731284f80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432724801997911a6f7f216a9b6f125a') in 0.039562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.545488 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_0.asset
+  artifactKey: Guid(14eec7b7d7f4dc04daaff13477f76c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_0.asset using Guid(14eec7b7d7f4dc04daaff13477f76c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62542dca48a6aed1300467b8c518e216') in 0.012404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_2.asset
+  artifactKey: Guid(f0df5b9606899aa48914741fc579ed10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_2.asset using Guid(f0df5b9606899aa48914741fc579ed10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a383a64569ace8397e21477f7da483fa') in 0.007147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 137.408482 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_3.asset
+  artifactKey: Guid(6a97b826ba5a5d6458f6fbad4ed32ba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_3.asset using Guid(6a97b826ba5a5d6458f6fbad4ed32ba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616425bc4bdd1ec31e70cd05b1d561e8') in 0.008231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011865 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_7.asset
+  artifactKey: Guid(58f1a43b2a036a44690ac5f45cb7eacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_7.asset using Guid(58f1a43b2a036a44690ac5f45cb7eacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a836673bf1623581ffcef1dac68131a8') in 0.012354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_11.asset
+  artifactKey: Guid(221760733341a4148b979753ddc46aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_11.asset using Guid(221760733341a4148b979753ddc46aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ea7d0a159d13f316c06a9d6df7486d') in 0.008062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_8.asset
+  artifactKey: Guid(fff6df7c4491d994cb412e654806b6eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_8.asset using Guid(fff6df7c4491d994cb412e654806b6eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde1366886d10601c542f6f3045e9303') in 0.007824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Tileset/pipes+buildings_12.asset
+  artifactKey: Guid(1b2964237efced340849064083048464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tileset/pipes+buildings_12.asset using Guid(1b2964237efced340849064083048464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64055a1a13d1f0add10bb9e85c363bec') in 0.009174 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

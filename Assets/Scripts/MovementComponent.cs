@@ -15,15 +15,12 @@ public class MovementComponent : MonoBehaviour
     public bool _onGround;
     private bool _jump;
     private bool _fall;
-    private bool _moveCamera;   
-    public bool MoveCamera {get{ return _moveCamera; }}
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _onGround = true;
-        _moveCamera = false;
         _maxSpeed = 10;
     }
 
@@ -36,7 +33,6 @@ public class MovementComponent : MonoBehaviour
             {
                 _rigidbody2D.AddForce(Vector2.left * _speed * Time.deltaTime, ForceMode2D.Impulse);
             }
-            _moveCamera = false;
         }
         else if (Input.GetKey(KeyCode.D))
         {         
@@ -44,7 +40,6 @@ public class MovementComponent : MonoBehaviour
             {
                 _rigidbody2D.AddForce(Vector2.right * _speed * Time.deltaTime, ForceMode2D.Impulse);
             }
-            _moveCamera = true;
         }
 
         if (_onGround && Input.GetKey(KeyCode.LeftControl))
