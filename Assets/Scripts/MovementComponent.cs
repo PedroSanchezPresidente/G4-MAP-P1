@@ -13,6 +13,7 @@ public class MovementComponent : MonoBehaviour
     [SerializeField]
     private float _downForce;
     public bool _onGround;
+    public bool _blockHitted = false;
     private bool _jump;
     private bool _fall;
 
