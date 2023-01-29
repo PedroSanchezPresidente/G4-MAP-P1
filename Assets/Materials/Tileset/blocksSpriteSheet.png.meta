@@ -3,7 +3,7 @@ guid: f5ffd38c2954a8c439f681b0c876f4ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,7 +20,6 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -64,8 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -557,15 +554,15 @@ TextureImporter:
       blocksSpriteSheet_211: -983653251
       blocksSpriteSheet_73: 474746254
       blocksSpriteSheet_128: 583532646
-      blocksSpriteSheet_262: -841207430
+      blocksSpriteSheet_177: 885991523
       blocksSpriteSheet_190: 421665709
       blocksSpriteSheet_154: -1585970601
-      blocksSpriteSheet_106: 1685350243
+      blocksSpriteSheet_262: -841207430
       blocksSpriteSheet_120: -283249690
       blocksSpriteSheet_251: -50958707
-      blocksSpriteSheet_177: 885991523
-      blocksSpriteSheet_129: -220372203
+      blocksSpriteSheet_106: 1685350243
       blocksSpriteSheet_71: 1968027256
+      blocksSpriteSheet_129: -220372203
       blocksSpriteSheet_258: 909732524
       blocksSpriteSheet_20: -1001019966
       blocksSpriteSheet_31: -1502347183
@@ -807,6 +804,7 @@ TextureImporter:
       blocksSpriteSheet_94: 1095329949
   spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
