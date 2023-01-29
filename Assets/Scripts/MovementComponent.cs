@@ -32,14 +32,14 @@ public class MovementComponent : MonoBehaviour
         {          
             if (_rigidbody2D.velocity.x >-_maxSpeed)
             {
-                _rigidbody2D.AddForce(Vector2.left * _speed * Time.deltaTime, ForceMode2D.Impulse);
+                _rigidbody2D.AddForce(Vector2.left * _speed , ForceMode2D.Force);
             }
         }
         else if (Input.GetKey(KeyCode.D))
         {         
             if (_rigidbody2D.velocity.x < _maxSpeed)
             {
-                _rigidbody2D.AddForce(Vector2.right * _speed * Time.deltaTime, ForceMode2D.Impulse);
+                _rigidbody2D.AddForce(Vector2.right * _speed , ForceMode2D.Force);
             }
         }
 
