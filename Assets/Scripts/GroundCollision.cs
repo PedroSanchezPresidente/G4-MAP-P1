@@ -13,7 +13,7 @@ public class GroundCollision : MonoBehaviour
     
     private void OnCollisionStay2D(Collision2D collision)
     {
-        _movementComponent._blockHitted = false;
+        _movementComponent.blockHitted = false;
         _movementComponent._onGround = true;
     }
     private void OnCollisionExit2D(Collision2D collision)

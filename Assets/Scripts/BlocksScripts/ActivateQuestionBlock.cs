@@ -10,9 +10,9 @@ public class ActivateQuestionBlock : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         MovementComponent movementComponent = collision.gameObject.GetComponent<MovementComponent>();
-        if (!movementComponent._blockHitted)
+        if (!movementComponent.blockHitted && !_blockComponent.isActivated)
         {
-            movementComponent._blockHitted = true;
+            movementComponent.blockHitted = true;
             _blockComponent.onHit();
         }
     }
