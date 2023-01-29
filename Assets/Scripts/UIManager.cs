@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         if (_currentTime > 0)
         {
             _currentTime -= Time.deltaTime * 3;
-            Debug.Log(_currentTime);
+            //Debug.Log(_currentTime);
         }
     }
 
