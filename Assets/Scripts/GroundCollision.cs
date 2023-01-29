@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class GroundCollision : MonoBehaviour
 {
+    [SerializeField]
     private MovementComponent _movementComponent;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _movementComponent = FindObjectOfType<MovementComponent>();
-    }
     
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         _movementComponent.blockHitted = false;
         _movementComponent._onGround = true;
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         _movementComponent._onGround = false;
     }

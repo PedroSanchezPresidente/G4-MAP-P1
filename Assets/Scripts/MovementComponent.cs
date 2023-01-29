@@ -14,6 +14,7 @@ public class MovementComponent : MonoBehaviour
     [SerializeField]
     private float _downForce;
     public bool _onGround;
+    [HideInInspector]
     public bool blockHitted = false;
     private bool _jump;
     private bool _fall;
@@ -61,7 +62,7 @@ public class MovementComponent : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _onGround = true;
-        _maxSpeed = 10;
+        _maxSpeed = 5;
     }
     // Update is called once per frame
     void Update()
