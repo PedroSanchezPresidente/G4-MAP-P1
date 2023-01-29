@@ -79,10 +79,7 @@ public class MovementComponent : MonoBehaviour
             _jump = false;
 
         }
-        else if (_fall)
-        {
-            _rigidbody2D.AddForce(Vector2.down * _downForce);
-        }
+        
     }
 
 
