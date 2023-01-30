@@ -19,12 +19,15 @@ public class MovementComponent : MonoBehaviour
     private bool _jump;
     private bool _fall;
 
+    private Animator animator;
+
     #region Methods
     public void Left()
     {
         if (_rigidbody2D.velocity.x > -_maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.left * _speed , ForceMode2D.Force);
+            animator.SetFloat("Horizontal", Mathf.Abs(Vector2.left.x * _speed));
         }
     }
     public void Right()
@@ -32,6 +35,7 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x < _maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.right * _speed, ForceMode2D.Force);
+            animator.SetFloat("Horizontal", Mathf.Abs(Vector2.left.x * _speed));
         }
     }
     public void Sprint() 
@@ -61,6 +65,7 @@ public class MovementComponent : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         _onGround = true;
         _maxSpeed = 5;
     }
@@ -80,7 +85,12 @@ public class MovementComponent : MonoBehaviour
             _jump = false;
 
         }
-        
+        else if (_fall)
+        {
+            _rigidbody2D.AddForce(Vector2.down * _downForce);
+        }
+        animator.SetBool("onGround", _onGround);
+
     }
 
 
