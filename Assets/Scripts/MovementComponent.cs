@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class MovementComponent : MonoBehaviour
 {
-    Rigidbody2D _rigidbody2D;
+    private Rigidbody2D _rigidbody2D;
     [SerializeField]
     private float _speed;
     private float _maxSpeed;
@@ -13,55 +14,72 @@ public class MovementComponent : MonoBehaviour
     [SerializeField]
     private float _downForce;
     public bool _onGround;
+    [HideInInspector]
     public bool blockHitted = false;
     private bool _jump;
     private bool _fall;
 
-    // Start is called before the first frame update
-    void Start()
+    private Animator animator;
+
+    #region Methods
+    public void Left()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-        _onGround = true;
-        _maxSpeed = 10;
+        if (_rigidbody2D.velocity.x > -_maxSpeed)
+        {
+            _rigidbody2D.AddForce(Vector2.left * _speed , ForceMode2D.Force);
+            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Right()
     {
-        if (Input.GetKey(KeyCode.A))
-        {          
-            if (_rigidbody2D.velocity.x >-_maxSpeed)
-            {
-                _rigidbody2D.AddForce(Vector2.left * _speed , ForceMode2D.Force);
-            }
+        if (_rigidbody2D.velocity.x < _maxSpeed)
+        {
+            _rigidbody2D.AddForce(Vector2.right * _speed, ForceMode2D.Force);
+            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
-        else if (Input.GetKey(KeyCode.D))
-        {         
-            if (_rigidbody2D.velocity.x < _maxSpeed)
-            {
-                _rigidbody2D.AddForce(Vector2.right * _speed , ForceMode2D.Force);
-            }
-        }
-
-        if (_onGround && Input.GetKey(KeyCode.LeftControl))
+    }
+    public void Sprint() 
+    {
+        if (_onGround)
         {
             _maxSpeed = 12;
         }
         else _maxSpeed = 10;
-        
-        if (Input.GetKeyDown(KeyCode.Space) && _onGround)
+    }
+    public void Jump()
+    {
+        if (_onGround)
         {
             _jump = true;
             _fall = false;
             _onGround = false;
         }
+    }
+    public void Down()
+    {
+        //hacer que se agache
+    }
+
+    #endregion
+    // Start is called before the first frame update
+    void Start()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        _onGround = true;
+        _maxSpeed = 5;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if(_rigidbody2D.velocity.x < 0.1 && _rigidbody2D.velocity.x > -0.1)
+        {
+            animator.SetFloat("Horizontal", _rigidbody2D.velocity.x);
+        }
         if (!Input.GetKey(KeyCode.Space))
         {
             _fall = true;
         }
-        
-        
-
     }
     private void FixedUpdate()
     {
@@ -75,7 +93,9 @@ public class MovementComponent : MonoBehaviour
         {
             _rigidbody2D.AddForce(Vector2.down * _downForce);
         }
+        animator.SetBool("onGround", _onGround);
+
     }
-    
+
 
 }

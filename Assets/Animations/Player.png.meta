@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2e7979d9db919544b06731284f80964
+guid: 80448d21e32d4c741bcfc5545bde4a8e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,223 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pipes+buildings_0
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3bf7e7c6241033478feeab971bb6c6f
-      internalID: 2015779379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_1
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d7b5aee6907c3b49b8bf5a300c52244
-      internalID: -1366072902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_2
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 535
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c21223823e067234692f65c1167b98db
-      internalID: 1340172384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_3
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 535
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81268f47f27f9304bb1707f45aaf6bbe
-      internalID: 328994933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_4
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 518
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3eb6ffde79aa6ae4ab257ba85e6817a7
-      internalID: 1508512263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_5
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 518
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22d7e551384de9847a92a98fce6e0953
-      internalID: 1750038070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_6
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 501
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ac667cb6383d2f46b27c24cea734a29
-      internalID: 716931966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_7
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 501
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04653d538cf8929449acf0dedb6f2dfe
-      internalID: 748039409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_8
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 501
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c17214f3c5074842b966101d20abdab
-      internalID: 1569646577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_9
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 518
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52589703e8af35948bc6b2ed23fbd9c8
-      internalID: 323784941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_10
+      name: miniMarioIdle
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 412
         width: 16
-        height: 176
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,19 +118,145 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7267c0aa4e89a5b4fa91a5fa2686d610
-      internalID: 688101998
+      spriteID: 010bf7c0170957842a9c541870c06ddd
+      internalID: -2099240124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_11
+      name: miniMarioWalking_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 48
-        width: 48
+        x: 20
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef5fcecb9b8aa74090fc03d946eb4e0
+      internalID: -1735777928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniMarioWalking_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05a46816398d9a48a229905c00c13db
+      internalID: 193210355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniMarioWalking_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1b0ec74fc6c5e45ab9e7d53eb989c7
+      internalID: -289372926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniMarioBraking
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5818069f878770d4ba13ded6b0c18153
+      internalID: -303462019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniMarioJumping
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0b60941bbfc604289a2575a9083910
+      internalID: -1783449007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniMarioDying
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558e3f4ba0f6624469ae94083861987e
+      internalID: -1836982154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioIdle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -349,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffbf5cfedb9a75647bc3a1feea16a0b9
-      internalID: -1031881501
+      spriteID: 64cd695ba86533a4590bdc4e95c902a8
+      internalID: -1628976652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_12
+      name: bigMarioWalking_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 80
-        height: 48
+        x: 20
+        y: 372
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,20 +286,209 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64a30604224a059439c50b0453e81e3c
-      internalID: 1616389846
+      spriteID: 52677a4118b11b9469c0400a8ac16ece
+      internalID: 375374038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_13
+      name: bigMarioWalking_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c1b3b41bd1e2f4f89e5354af3ba96f
+      internalID: -1817027740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioWalking_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9b7bcb4e364814988ad449dbc1a7a5
+      internalID: -1248602858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioBraking
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765cb7b89e305fb47808e320b4d58f9a
+      internalID: -1438005502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioJumping
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6ac98d7ae604e4ea8c90ee3a1f5924
+      internalID: -1819875926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMArioSquatting
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 372
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620c85cd0d7f0164686cdee959185666
+      internalID: 765655733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniMarioToBig_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 332
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a3f714a13ad934799bd7b1054f8d37
+      internalID: -1455509139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioToMini_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 332
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c86a07c60e78a44083f4ca2957d5f72
+      internalID: -504034843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioToMini_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 332
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea92433aca66c294eac5037556a1a5f3
+      internalID: 2078433417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigMarioToMini_3
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1877aa021c39bc841a1d9e150b2bd2c4
+      internalID: 219407337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireMarioIdle
       rect:
         serializedVersion: 2
         x: 0
-        y: 501
+        y: 264
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,20 +496,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab809396b60ca2c4596e821cae79bd5c
-      internalID: 546968570
+      spriteID: 2979cb4e1bff74c40a88664db7e63ca5
+      internalID: -1047159608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_14
+      name: fireMarioWalking_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 501
+        x: 20
+        y: 264
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,20 +517,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 014ef3a1173eb7240ad25cbe95f44f7e
-      internalID: -563544464
+      spriteID: 8f7574f34ab080d4bb4309c31f8fb686
+      internalID: 255387706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_15
+      name: fireMarioWalking_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 501
+        x: 38
+        y: 264
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,20 +538,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 858bdf278815110459024aa643f21bcf
-      internalID: -2112474155
+      spriteID: 22c15909cc541294194695c25b548af4
+      internalID: 796853910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_16
+      name: fireMarioWalking_2
       rect:
         serializedVersion: 2
-        x: 51
-        y: 501
+        x: 56
+        y: 264
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,20 +559,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dacb435513262c4cab4b9d382795754
-      internalID: 449121334
+      spriteID: b3d01abe48b9ca042b2d14026eb86c1d
+      internalID: 1307842383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_17
+      name: fireMarioBraking
       rect:
         serializedVersion: 2
-        x: 68
-        y: 501
+        x: 76
+        y: 264
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,20 +580,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1ac1caa29afd746afb31a7fcc042c6
-      internalID: -861304731
+      spriteID: 4779ce4284b95d54894179b1401f64c5
+      internalID: 1081261008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_18
+      name: fireMarioBrakin
       rect:
         serializedVersion: 2
-        x: 34
-        y: 518
+        x: 96
+        y: 264
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,83 +601,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 456795c42ae2a41419da66f6ac767f31
-      internalID: 414116729
+      spriteID: 04c130e90887d0349895f1a88807d684
+      internalID: 2119289533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipes+buildings_19
+      name: fireMarioSquatting
       rect:
         serializedVersion: 2
-        x: 34
-        y: 535
+        x: 116
+        y: 264
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 444098efd8623ac44a22e8453bd5d4e3
-      internalID: -2075929922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_20
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 535
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb72d3a64696dcf42b5a0c4b00431a3f
-      internalID: 302032645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_21
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 535
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9108c10d51791df41862d2b5aae1426b
-      internalID: -2114993673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_22
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 732
-        width: 16
-        height: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,113 +622,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7aa9f0a026b83a47b3f9f95b60f8a81
-      internalID: 833186539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_23
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 732
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 275dfd595e0429c4a83c1af0213110db
-      internalID: -1913809977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_24
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 732
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aef0b0a9d2c72a04a8a13e1ad517a111
-      internalID: -116311768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_25
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 715
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28beeb65b8aa57347a282ef726b31895
-      internalID: -1814697264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_26
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 715
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b1858d2520c40146bc1b0876b29394f
-      internalID: 1511394620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipes+buildings_27
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 715
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86b310337be9e05409bbb223bac67563
-      internalID: -332919124
+      spriteID: 294db74f2aa7e414199aa51547d45f5c
+      internalID: -1089167215
       vertices: []
       indices: 
       edges: []
@@ -702,34 +639,31 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pipes+buildings_26: -1814697264
-      pipes+buildings_8: 1569646577
-      pipes+buildings_11: 688101998
-      pipes+buildings_12: -1031881501
-      pipes+buildings_2: 1340172384
-      pipes+buildings_23: 833186539
-      pipes+buildings_25: -116311768
-      pipes+buildings_5: 1750038070
-      pipes+buildings_10: -44350487
-      pipes+buildings_19: -2075929922
-      pipes+buildings_13: 546968570
-      pipes+buildings_4: 1508512263
-      pipes+buildings_20: 302032645
-      pipes+buildings_6: 716931966
-      pipes+buildings_9: 323784941
-      pipes+buildings_14: -563544464
-      pipes+buildings_15: -2112474155
-      pipes+buildings_16: 449121334
-      pipes+buildings_3: 328994933
-      pipes+buildings_24: -1913809977
-      pipes+buildings_22: -1118201822
-      pipes+buildings_27: 1511394620
-      pipes+buildings_17: -861304731
-      pipes+buildings_21: -2114993673
-      pipes+buildings_7: 748039409
-      pipes+buildings_1: -1366072902
-      pipes+buildings_18: 414116729
-      pipes+buildings_0: 2015779379
+      bigMarioToMini_2: 2078433417
+      bigMarioWalking_2: -1248602858
+      miniMarioWalking_1: 193210355
+      bigMArioSquatting: 765655733
+      miniMarioToBig_1: -1455509139
+      bigMarioIdle: -1628976652
+      fireMarioWalking_2: 1307842383
+      fireMarioBrakin: 2119289533
+      bigMarioWalking_0: 375374038
+      bigMarioJumping: -1819875926
+      bigMarioBraking: -1438005502
+      miniMarioBraking: -303462019
+      miniMarioIdle: -2099240124
+      bigMarioToMini_1: -504034843
+      fireMarioIdle: -1047159608
+      fireMarioBraking: 1081261008
+      miniMarioDying: -1836982154
+      fireMarioWalking_0: 255387706
+      miniMarioWalking_0: -1735777928
+      fireMarioWalking_1: 796853910
+      bigMarioToMini_3: 219407337
+      fireMarioSquatting: -1089167215
+      miniMarioJumping: -1783449007
+      miniMarioWalking_2: -289372926
+      bigMarioWalking_1: -1817027740
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
