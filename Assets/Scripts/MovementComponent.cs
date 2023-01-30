@@ -27,7 +27,7 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x > -_maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.left * _speed , ForceMode2D.Force);
-            animator.SetFloat("Horizontal", Mathf.Abs(Vector2.left.x * _speed));
+            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
     public void Right()
@@ -35,7 +35,7 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x < _maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.right * _speed, ForceMode2D.Force);
-            animator.SetFloat("Horizontal", Mathf.Abs(Vector2.left.x * _speed));
+            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
     public void Sprint() 
@@ -72,6 +72,10 @@ public class MovementComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_rigidbody2D.velocity.x < 0.1 && _rigidbody2D.velocity.x > -0.1)
+        {
+            animator.SetFloat("Horizontal", _rigidbody2D.velocity.x);
+        }
         if (!Input.GetKey(KeyCode.Space))
         {
             _fall = true;
