@@ -15,7 +15,6 @@ public class MovementComponent : MonoBehaviour
     public bool _onGround;
     [HideInInspector]
     public bool blockHitted = false;
-    private bool _jump;
 
     private Animator animator;
 
@@ -54,7 +53,8 @@ public class MovementComponent : MonoBehaviour
     {
         if (_onGround)
         {
-            _jump = true;
+            _rigidbody2D.velocity *=Vector2.right;
+            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             _onGround = false;
         }
     }
@@ -78,12 +78,6 @@ public class MovementComponent : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (_jump)
-        {
-            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            _jump = false;
-
-        }
         /*else if (_fall)
         {
             _rigidbody2D.AddForce(Vector2.down * _downForce);

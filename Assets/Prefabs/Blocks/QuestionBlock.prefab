@@ -30,8 +30,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6691258954161642395}
-  m_RootOrder: 1
+  m_Father: {fileID: 5078219732741568565}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5086783926248580865
 BoxCollider2D:
@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.9356249, y: -0.1334669}
+  m_Offset: {x: -0.932781, y: -0.1334669}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87375295, y: 0.2554475}
+  m_Size: {x: 0.3789006, y: 0.2554475}
   m_EdgeRadius: 0
 --- !u!114 &6874692997850735427
 MonoBehaviour:
@@ -103,7 +103,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4801661897792580958}
   m_Father: {fileID: 6691258954161642395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -198,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 8246211858504202373}
+  isActivated: 0
 --- !u!95 &7074508233811014166
 Animator:
   serializedVersion: 4
@@ -247,7 +249,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5078219732741568565}
-  - {fileID: 4801661897792580958}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

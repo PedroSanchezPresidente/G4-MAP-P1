@@ -7,7 +7,7 @@ public class GroundCollision : MonoBehaviour
     [SerializeField]
     private MovementComponent _movementComponent;
     
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         _movementComponent.blockHitted = false;
         _movementComponent._onGround = true;
