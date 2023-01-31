@@ -12,9 +12,12 @@ public class MovementComponent : MonoBehaviour
     private float _maxSpeed;
     [SerializeField]
     private float _jumpForce;
-    public bool _onGround;
+
     [HideInInspector]
-    public bool blockHitted = false;
+    public bool _onGround;
+
+    [HideInInspector]
+    public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
 
     private Animator animator;
 
@@ -78,12 +81,7 @@ public class MovementComponent : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        /*else if (_fall)
-        {
-            _rigidbody2D.AddForce(Vector2.down * _downForce);
-        }*/
         animator.SetBool("onGround", _onGround);
-
     }
 
 

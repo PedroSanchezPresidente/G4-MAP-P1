@@ -34,6 +34,7 @@ public class InputComponent : MonoBehaviour
         {
             _movementComponent.Sprint();
         }
+        // Devuelve la velocidad normal cuando se suelta el boton
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             _movementComponent.Walk();
