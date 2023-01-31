@@ -8,16 +8,16 @@ public class MovementComponent : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     [SerializeField]
     private float _speed;
+    [SerializeField]
     private float _maxSpeed;
     [SerializeField]
     private float _jumpForce;
-    [SerializeField]
-    private float _downForce;
-    public bool _onGround;
+
     [HideInInspector]
-    public bool blockHitted = false;
-    private bool _jump;
-    private bool _fall;
+    public bool _onGround;
+
+    [HideInInspector]
+    public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
 
     private Animator animator;
 
@@ -42,22 +42,24 @@ public class MovementComponent : MonoBehaviour
     {
         if (_onGround)
         {
-            _maxSpeed = 12;
+            _maxSpeed = 7;
         }
-        else _maxSpeed = 10;
+        else _maxSpeed = 5;
     }
+
+    public void Walk()
+    {
+        _maxSpeed = 5;
+    }
+
     public void Jump()
     {
         if (_onGround)
         {
-            _jump = true;
-            _fall = false;
+            _rigidbody2D.velocity *=Vector2.right;
+            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             _onGround = false;
         }
-    }
-    public void Down()
-    {
-        //hacer que se agache
     }
 
     #endregion
@@ -76,25 +78,10 @@ public class MovementComponent : MonoBehaviour
         {
             animator.SetFloat("Horizontal", _rigidbody2D.velocity.x);
         }
-        if (!Input.GetKey(KeyCode.Space))
-        {
-            _fall = true;
-        }
     }
     private void FixedUpdate()
     {
-        if (_jump)
-        {
-            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            _jump = false;
-
-        }
-        else if (_fall)
-        {
-            _rigidbody2D.AddForce(Vector2.down * _downForce);
-        }
         animator.SetBool("onGround", _onGround);
-
     }
 
 

@@ -13,7 +13,7 @@ public class InputComponent : MonoBehaviour
         _movementComponent = GetComponent<MovementComponent>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -30,14 +30,14 @@ public class InputComponent : MonoBehaviour
             _movementComponent.Left();
 
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            _movementComponent.Down();
-
-        }
         if (Input.GetKey(KeyCode.LeftControl))
         {
             _movementComponent.Sprint();
+        }
+        // Devuelve la velocidad normal cuando se suelta el boton
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            _movementComponent.Walk();
         }
     }
 }
