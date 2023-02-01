@@ -16,6 +16,7 @@ public class InputComponent : MonoBehaviour
 
     void Update()
     {
+        // Sistema de salto
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _movementComponent.StarJumping();
@@ -28,6 +29,8 @@ public class InputComponent : MonoBehaviour
         {
             _movementComponent.StopJump();
         }
+
+        // Sistema de movimiento
         if (Input.GetKey(KeyCode.D))
         {
             _movementComponent.Right();
@@ -38,6 +41,8 @@ public class InputComponent : MonoBehaviour
             _movementComponent.Left();
 
         }
+
+        // Sitema de correr y disparar
         if (Input.GetKey(KeyCode.LeftControl))
         {
             _movementComponent.Sprint();

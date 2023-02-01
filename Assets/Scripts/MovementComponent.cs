@@ -12,9 +12,11 @@ public class MovementComponent : MonoBehaviour
     private float _maxSpeed;
     [SerializeField]
     private float _jumpForce;
+
     private float jumpTimeCounter;
     [SerializeField]
-    private float jumpTime;
+    private float jumpTime;  // Esta variable determina el valor inicial del contador
+    
     public bool isJumping;
 
     [HideInInspector]
@@ -55,6 +57,7 @@ public class MovementComponent : MonoBehaviour
         _maxSpeed = 5;
     }
 
+    //Impulso inicial del salto
     public void StarJumping()
     {
         if (_onGround)
@@ -68,6 +71,7 @@ public class MovementComponent : MonoBehaviour
         }
     }
 
+    // Esta funcion determina cuanto mas va a saltar
     public void JumpLonger()
     {
         if (jumpTimeCounter > 0)
@@ -84,6 +88,7 @@ public class MovementComponent : MonoBehaviour
         }
     }
 
+    // Frena el salto
     public void StopJump()
     {
         isJumping = false;
