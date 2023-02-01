@@ -12,6 +12,10 @@ public class MovementComponent : MonoBehaviour
     private float _maxSpeed;
     [SerializeField]
     private float _jumpForce;
+    private float jumpTimeCounter;
+    [SerializeField]
+    private float jumpTime;
+    public bool isJumping;
 
     [HideInInspector]
     public bool _onGround;
@@ -55,19 +59,34 @@ public class MovementComponent : MonoBehaviour
     {
         if (_onGround)
         {
-            _rigidbody2D.velocity *=Vector2.right;
-            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            Vector2 v = _rigidbody2D.velocity;
+            v.y = _jumpForce;
+            _rigidbody2D.velocity = v;
             _onGround = false;
         }
     }
 
-    public void Jump()
+    public void JumpLonger()
     {
-        _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        if (jumpTimeCounter > 0)
+        {
+            Debug.Log(Time.deltaTime);
+            Vector2 v = _rigidbody2D.velocity;
+            v.y = _jumpForce;
+            _rigidbody2D.velocity = v;
+            jumpTimeCounter -= 0.1f;
+        }
+        else
+        {
+            isJumping = false;
+        }
     }
 
     public void StopJump()
     {
+        isJumping = false;
     }
 
     #endregion

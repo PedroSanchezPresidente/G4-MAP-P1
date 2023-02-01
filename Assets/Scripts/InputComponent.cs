@@ -8,10 +8,6 @@ public class InputComponent : MonoBehaviour
     private MovementComponent _movementComponent;
     #endregion
 
-    private float jumpTimeCounter;
-    [SerializeField]
-    private float jumpTime;
-    private bool isJumping;
 
     void Start()
     {
@@ -20,27 +16,17 @@ public class InputComponent : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _movementComponent._onGround)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
             _movementComponent.StarJumping();
         }
-        if (Input.GetKey(KeyCode.Space) && isJumping)
+        if (Input.GetKey(KeyCode.Space) && _movementComponent)
         {
-            if (jumpTimeCounter > 0)
-            {
-                _movementComponent.Jump();
-                jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
+            _movementComponent.JumpLonger();
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            isJumping = false;
+            _movementComponent.StopJump();
         }
         if (Input.GetKey(KeyCode.D))
         {
