@@ -8,18 +8,29 @@ public class InputComponent : MonoBehaviour
     private MovementComponent _movementComponent;
     #endregion
 
+
     void Start()
     {
         _movementComponent = GetComponent<MovementComponent>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        // Sistema de salto
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            _movementComponent.Jump();
-
+            _movementComponent.StarJumping();
         }
+        if (Input.GetKey(KeyCode.Space) && _movementComponent)
+        {
+            _movementComponent.JumpLonger();
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            _movementComponent.StopJump();
+        }
+
+        // Sistema de movimiento
         if (Input.GetKey(KeyCode.D))
         {
             _movementComponent.Right();
@@ -30,6 +41,8 @@ public class InputComponent : MonoBehaviour
             _movementComponent.Left();
 
         }
+
+        // Sitema de correr y disparar
         if (Input.GetKey(KeyCode.LeftControl))
         {
             _movementComponent.Sprint();

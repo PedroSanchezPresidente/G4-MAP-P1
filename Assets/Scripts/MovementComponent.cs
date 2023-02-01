@@ -13,9 +13,14 @@ public class MovementComponent : MonoBehaviour
     [SerializeField]
     private float _jumpForce;
 
+    private float jumpTimeCounter;
+    [SerializeField]
+    private float jumpTime;  // Esta variable determina el valor inicial del contador
+    
+    public bool isJumping;
+
     [HideInInspector]
     public bool _onGround;
-
     [HideInInspector]
     public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
 
@@ -52,14 +57,41 @@ public class MovementComponent : MonoBehaviour
         _maxSpeed = 5;
     }
 
-    public void Jump()
+    //Impulso inicial del salto
+    public void StarJumping()
     {
         if (_onGround)
         {
-            _rigidbody2D.velocity *=Vector2.right;
-            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            Vector2 v = _rigidbody2D.velocity;
+            v.y = _jumpForce;
+            _rigidbody2D.velocity = v;
             _onGround = false;
         }
+    }
+
+    // Esta funcion determina cuanto mas va a saltar
+    public void JumpLonger()
+    {
+        if (jumpTimeCounter > 0)
+        {
+            Debug.Log(Time.deltaTime);
+            Vector2 v = _rigidbody2D.velocity;
+            v.y = _jumpForce;
+            _rigidbody2D.velocity = v;
+            jumpTimeCounter -= 0.1f;
+        }
+        else
+        {
+            isJumping = false;
+        }
+    }
+
+    // Frena el salto
+    public void StopJump()
+    {
+        isJumping = false;
     }
 
     #endregion
