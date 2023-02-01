@@ -10120,7 +10120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 30
   _maxSpeed: 0
-  _jumpForce: 18
+  _jumpForce: 3
   _onGround: 0
   blockHitted: 0
 --- !u!50 &1659911655
@@ -10156,6 +10156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2903f6940c0844429fbada3d475bffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpTime: 1
 --- !u!95 &1659911659
 Animator:
   serializedVersion: 4
