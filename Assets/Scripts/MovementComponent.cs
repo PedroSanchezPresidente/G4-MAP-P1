@@ -15,7 +15,6 @@ public class MovementComponent : MonoBehaviour
 
     [HideInInspector]
     public bool _onGround;
-
     [HideInInspector]
     public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
 
@@ -52,7 +51,7 @@ public class MovementComponent : MonoBehaviour
         _maxSpeed = 5;
     }
 
-    public void Jump()
+    public void StarJumping()
     {
         if (_onGround)
         {
@@ -60,6 +59,15 @@ public class MovementComponent : MonoBehaviour
             _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             _onGround = false;
         }
+    }
+
+    public void Jump()
+    {
+        _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+    }
+
+    public void StopJump()
+    {
     }
 
     #endregion
