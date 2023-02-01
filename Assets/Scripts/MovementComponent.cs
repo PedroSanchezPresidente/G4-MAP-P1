@@ -6,19 +6,15 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private int _fpsLimit = 60;//Para no petar el PC un saludo
     [SerializeField]
     private float _speed;
     [SerializeField]
     private float _maxSpeed;
     [SerializeField]
     private float _jumpForce;
-
-    private float jumpTimeCounter;
     [SerializeField]
-    private float jumpTime;  // Esta variable determina el valor inicial del contador
-    
-    public bool isJumping;
-
+    private float _downforce;//Se activa al dejar de presionar       
     [HideInInspector]
     public bool _onGround;
     [HideInInspector]
@@ -31,7 +27,7 @@ public class MovementComponent : MonoBehaviour
     {
         if (_rigidbody2D.velocity.x > -_maxSpeed)
         {
-            _rigidbody2D.AddForce(Vector2.left * _speed , ForceMode2D.Force);
+            _rigidbody2D.AddForce(Vector2.left * _speed, ForceMode2D.Force);
             animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
@@ -45,59 +41,28 @@ public class MovementComponent : MonoBehaviour
     }
     public void Sprint() 
     {
-        if (_onGround)
-        {
-            _maxSpeed = 7;
-        }
-        else _maxSpeed = 5;
+        _maxSpeed = 7;
     }
-
-    public void Walk()
+    public void StopSprint()
     {
         _maxSpeed = 5;
-    }
+    } 
 
     //Impulso inicial del salto
-    public void StarJumping()
+    public void Jump()
     {
         if (_onGround)
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            Vector2 v = _rigidbody2D.velocity;
-            v.y = _jumpForce;
-            _rigidbody2D.velocity = v;
-            _onGround = false;
+        {           
+            _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);           
         }
     }
 
-    // Esta funcion determina cuanto mas va a saltar
-    public void JumpLonger()
-    {
-        if (jumpTimeCounter > 0)
-        {
-            Debug.Log(Time.deltaTime);
-            Vector2 v = _rigidbody2D.velocity;
-            v.y = _jumpForce;
-            _rigidbody2D.velocity = v;
-            jumpTimeCounter -= 0.1f;
-        }
-        else
-        {
-            isJumping = false;
-        }
-    }
-
-    // Frena el salto
-    public void StopJump()
-    {
-        isJumping = false;
-    }
-
+   
     #endregion
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = _fpsLimit;//limitador, no quitar
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         _onGround = true;
@@ -110,10 +75,15 @@ public class MovementComponent : MonoBehaviour
         {
             animator.SetFloat("Horizontal", _rigidbody2D.velocity.x);
         }
+        
     }
     private void FixedUpdate()
     {
         animator.SetBool("onGround", _onGround);
+        if (!Input.GetKey(KeyCode.Space) && !_onGround)//Salto a distintas alturas si mantienes, (bajada)
+        {
+            _rigidbody2D.AddForce(Vector2.down * _downforce, ForceMode2D.Impulse);
+        }
     }
 
 
