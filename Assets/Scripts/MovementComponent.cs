@@ -73,7 +73,7 @@ public class MovementComponent : MonoBehaviour
     {
         if(_rigidbody2D.velocity.x < 0.1 && _rigidbody2D.velocity.x > -0.1)
         {
-            animator.SetFloat("Horizontal", _rigidbody2D.velocity.x);
+            animator.SetFloat("horizontal", _rigidbody2D.velocity.x);
         }
         
     }
