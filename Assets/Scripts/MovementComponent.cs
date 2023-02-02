@@ -6,7 +6,7 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
-    private int _fpsLimit = 60;//Para no petar el PC un saludo
+    private int _fpsLimit = 60; //Para no petar el PC un saludo
     [SerializeField]
     private float _speed;
     [SerializeField]
@@ -14,11 +14,11 @@ public class MovementComponent : MonoBehaviour
     [SerializeField]
     private float _jumpForce;
     [SerializeField]
-    private float _downforce;//Se activa al dejar de presionar       
+    private float _downforce; //Se activa al dejar de presionar       
     [HideInInspector]
     public bool _onGround;
     [HideInInspector]
-    public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
+    public bool blockHitted = false; //Limitacion de bloques golpeados por salto
 
     private Animator animator;
 
@@ -28,7 +28,7 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x > -_maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.left * _speed, ForceMode2D.Force);
-            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
+            animator.SetFloat("horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
     public void Right()
@@ -36,7 +36,7 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x < _maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.right * _speed, ForceMode2D.Force);
-            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
+            animator.SetFloat("horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
     public void Sprint() 
@@ -73,9 +73,8 @@ public class MovementComponent : MonoBehaviour
     {
         if(_rigidbody2D.velocity.x < 0.1 && _rigidbody2D.velocity.x > -0.1)
         {
-            animator.SetFloat("Horizontal", _rigidbody2D.velocity.x);
+            animator.SetFloat("horizontal", 0);
         }
-        
     }
     private void FixedUpdate()
     {
