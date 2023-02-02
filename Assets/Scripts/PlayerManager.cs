@@ -12,18 +12,23 @@ public class PlayerManager : MonoBehaviour
     public enum PlayerStates {PEQUEÑO, GRANDE, FUEGO, ESTRELLA, MUERTO}
     //posibles referencias futuras 
     #endregion
-
+    
     #region Properties
     //Instancia del Player Manager
     static private PlayerManager _instance;
     //Public renference of Player Manager
     static public PlayerManager Instance { get { return _instance; } }
     //referencia estadi actual
-    [SerializeField] private PlayerStates _currentState;
+    private PlayerStates _currentState;
     //refencia estado siguiente
     private PlayerStates _nextState;
     //refencia publica del estado actual
     public PlayerStates CurrentState { get { return _currentState; } }
+
+    [SerializeField]
+    private GameObject _diedMario;//prefab mario muerto
+
+    private Transform _dMTransform;
     #endregion
     #region Methods
     //Inicialización de Player Manager
@@ -58,55 +63,60 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.ESTRELLA:
                 //invencibilidad (desactivar script killPlayer y activar el script killEnemyStar)
+                this.GetComponent<KillPlayerComponent>().enabled = false;
                 break;
-            case PlayerStates.MUERTO: 
+            case PlayerStates.MUERTO:
+
+                //activar animacion de muerte
                 Destroy(gameObject);
+                //comprobar si las vidas
+                //if > 0, vidas--;
+                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
+                
+
+                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
                 //llamar al GameManager para deshabilitar scripts
                 break;
         }
         
     }
-    private void ExitState(PlayerStates newState)
-    {
-        switch (newState)
-        {
-            case PlayerStates.PEQUEÑO:
-                //destruir sprite mario pequeño
-                break;
-            case PlayerStates.GRANDE:
-                //destruir sprite mario grande
-                break;
-            case PlayerStates.FUEGO:
-                //destruir sprite mario fuego
-                //lanzaFuego.enable = false
-                break;
-            case PlayerStates.ESTRELLA:
-                //deshabilitar script Estrella, habiliatar KillPlayer y deshabilitar KillEnemyStar
-                break;
-            case PlayerStates.MUERTO:
-                break;
-        }
-    }
-    private void UpdateState(PlayerStates state)
+    private void ExitState(PlayerStates state)
     {
         switch (state)
         {
-            case PlayerStates.ESTRELLA:
+            case PlayerStates.PEQUEÑO:
                 
                 break;
-            case PlayerStates.PEQUEÑO:
             case PlayerStates.GRANDE:
+                //activar animacion de hacerse pequeño
+                break;
             case PlayerStates.FUEGO:
+                //activar animacion de FireMario
+                //Activar script Lanza Fuego
+                break;
+            case PlayerStates.ESTRELLA:
+                //invencibilidad (desactivar script killPlayer y activar el script killEnemyStar)
+                this.GetComponent<KillPlayerComponent>().enabled = true;
+                break;
             case PlayerStates.MUERTO:
+
+                //activar animacion de muerte
+                Destroy(gameObject);
+                //comprobar si las vidas
+                //if > 0, vidas--;
+                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
+
+
+                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
+                //llamar al GameManager para deshabilitar scripts
                 break;
         }
-    } 
-
-
+    }
     #endregion
     // Start is called before the first frame update
     void Start()
     {
+        _dMTransform = _diedMario.GetComponent<Transform>();
         _currentState = PlayerStates.MUERTO;
         _nextState = PlayerStates.PEQUEÑO;
     }
@@ -117,9 +127,9 @@ public class PlayerManager : MonoBehaviour
         {
             ExitState(_currentState);
             _currentState = _nextState;
-            EnterState(_nextState);
+            EnterState(_currentState);
         }
-        UpdateState(_currentState);
+        
     }
 
 
