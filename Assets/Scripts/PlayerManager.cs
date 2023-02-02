@@ -24,6 +24,8 @@ public class PlayerManager : MonoBehaviour
     private PlayerStates _nextState;
     //refencia publica del estado actual
     public PlayerStates CurrentState { get { return _currentState; } }
+
+    private Animator _animator;
     #endregion
     #region Methods
     //Inicialización de Player Manager
@@ -47,10 +49,10 @@ public class PlayerManager : MonoBehaviour
         switch (newState)
         {
             case PlayerStates.PEQUEÑO:
-                //instanciar sprite Mario Pequeño
+                _animator.SetBool("Big", false);
                 break;
             case PlayerStates.GRANDE:
-                // instanciar sprite Mario Grande
+                _animator.SetBool("Big", true);
                 break;
             case PlayerStates.FUEGO:
                 //intanciar sprite fuego
@@ -107,6 +109,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _animator = GetComponent<Animator>();
         _currentState = PlayerStates.MUERTO;
         _nextState = PlayerStates.PEQUEÑO;
     }
