@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     //Public renference of Player Manager
     static public PlayerManager Instance { get { return _instance; } }
     //referencia estadi actual
-    private PlayerStates _currentState;
+    [SerializeField] private PlayerStates _currentState;
     //refencia estado siguiente
     private PlayerStates _nextState;
     //refencia publica del estado actual
@@ -37,6 +37,10 @@ public class PlayerManager : MonoBehaviour
         {
             Object.Destroy(gameObject);
         }
+    }
+    public void ChangeState(PlayerStates nextState)
+    {
+        _nextState = nextState;
     }
     private void EnterState(PlayerStates newState)
     {
