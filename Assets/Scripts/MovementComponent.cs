@@ -21,6 +21,7 @@ public class MovementComponent : MonoBehaviour
     public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
 
     private Animator animator;
+    private SpriteRenderer _spriteRenderer;
 
     #region Methods
     public void Left()
@@ -28,7 +29,8 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x > -_maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.left * _speed, ForceMode2D.Force);
-            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
+            _spriteRenderer.flipX = true;
+            animator.SetFloat("horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
     public void Right()
@@ -36,7 +38,8 @@ public class MovementComponent : MonoBehaviour
         if (_rigidbody2D.velocity.x < _maxSpeed)
         {
             _rigidbody2D.AddForce(Vector2.right * _speed, ForceMode2D.Force);
-            animator.SetFloat("Horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
+            _spriteRenderer.flipX = false;
+            animator.SetFloat("horizontal", Mathf.Abs(_rigidbody2D.velocity.x));
         }
     }
     public void Sprint() 
@@ -63,6 +66,7 @@ public class MovementComponent : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = _fpsLimit;//limitador, no quitar
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         _onGround = true;

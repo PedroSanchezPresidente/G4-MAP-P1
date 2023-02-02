@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     //Public renference of Player Manager
     static public PlayerManager Instance { get { return _instance; } }
     //referencia estadi actual
-    private PlayerStates _currentState;
+    [SerializeField] private PlayerStates _currentState;
     //refencia estado siguiente
     private PlayerStates _nextState;
     //refencia publica del estado actual
@@ -63,7 +63,7 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.ESTRELLA:
                 //invencibilidad (desactivar script killPlayer y activar el script killEnemyStar)
-                this.GetComponent<KillPlayerComponent>().enabled = false;
+                GetComponent<KillPlayerComponent>().enabled = false;
                 break;
             case PlayerStates.MUERTO:
 
@@ -118,8 +118,7 @@ public class PlayerManager : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _dMTransform = _diedMario.GetComponent<Transform>();
-        _currentState = PlayerStates.MUERTO;
-        _nextState = PlayerStates.PEQUEÑO;
+        _currentState = PlayerStates.PEQUEÑO;
     }
     // Update is called once per frame
     void Update()
