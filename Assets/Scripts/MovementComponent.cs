@@ -18,8 +18,6 @@ public class MovementComponent : MonoBehaviour
     [HideInInspector]
     public bool _onGround;
     [HideInInspector]
-    public bool _isRunning; //Se activa para correr
-    [HideInInspector]
     public bool blockHitted = false; //Limitacion de bloques golpeados por salto
 
     private Animator animator;
@@ -46,14 +44,12 @@ public class MovementComponent : MonoBehaviour
     }
     public void Sprint() 
     {
-        _isRunning = true;
-        animator.SetBool("keyPressed", _isRunning);
+        animator.SetBool("keyPressed", true);
         _maxSpeed = 7;
     }
     public void StopSprint()
     {
-        _isRunning = false;
-        animator.SetBool("keyPressed", _isRunning);
+        animator.SetBool("keyPressed", false);
         _maxSpeed = 5;
     } 
 
