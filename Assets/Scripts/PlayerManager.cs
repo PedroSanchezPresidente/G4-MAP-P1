@@ -52,12 +52,19 @@ public class PlayerManager : MonoBehaviour
         switch (newState)
         {
             case PlayerStates.PEQUEÑO:
-                _animator.SetBool("Big", false);
+                _animator.SetBool("Fuego", false);
+                _animator.SetBool("Big", false); 
+                _animator.SetBool("Mini", true);
                 break;
             case PlayerStates.GRANDE:
+                _animator.SetBool("Mini", false);
+                _animator.SetBool("Fuego", false);
                 _animator.SetBool("Big", true);
                 break;
             case PlayerStates.FUEGO:
+                _animator.SetBool("Mini", false);
+                _animator.SetBool("Big", true);
+                _animator.SetBool("Fuego", true);
                 //intanciar sprite fuego
                 //Activar script Lanza Fuego
                 break;
@@ -66,8 +73,7 @@ public class PlayerManager : MonoBehaviour
                 GetComponent<KillPlayerComponent>().enabled = false;
                 break;
             case PlayerStates.MUERTO:
-
-                //activar animacion de muerte
+                _animator.SetBool("isDead", true);
                 Destroy(gameObject);
                 //comprobar si las vidas
                 //if > 0, vidas--;
