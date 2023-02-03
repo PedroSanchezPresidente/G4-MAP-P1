@@ -25,8 +25,16 @@ public class MushroomComponent : MonoBehaviour
     {   
         if (collision.gameObject.layer == 6) //layer del player
         {
-            PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
-            Destroy(gameObject);
+            if (PlayerManager.Instance.CurrentState == PlayerManager.PlayerStates.PEQUEÑO)
+            {
+                PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
+                Destroy(gameObject);
+            }
+            else
+            {
+                // dar puntos 
+            }
+
         }
     }
 }
