@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
         {
             case GameStates.GAME:
                 _remainingTime -= Time.deltaTime;
-                Debug.Log("tempo");
+                //Debug.Log("tempo");
                 if (_remainingTime < 0)
                 {
                     PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
