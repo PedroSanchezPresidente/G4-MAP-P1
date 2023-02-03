@@ -6,18 +6,59 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     #region references
-    [SerializeField] private TMP_Text _puntuacion;
-    [SerializeField] private TMP_Text _monedas;
+    [SerializeField] private TMP_Text _points;
+    [SerializeField] private TMP_Text _coins;
+    [SerializeField] private TMP_Text _lifes;
 
     //tiempo
-    [SerializeField] private TMP_Text _tiempo;
-    [SerializeField] private float _currentTime;
-    [SerializeField] private float _timerDuration;
-    
+    [SerializeField] private TMP_Text _remainingTime;
+
+    //MENUS
+    [SerializeField] private GameObject _startMenu;
+    [SerializeField] private GameObject _gameplayHUD;
+    [SerializeField] private GameObject _gameOverMenu;
     #endregion
 
+    #region properties
+    //array de distintos menus
+    private GameObject[] _menus;
+    #endregion
+    #region methods
+    public void SetUpGameHUD(float remainingTime)
+    {
+        int aux = (int)remainingTime;
+        _remainingTime.text = aux.ToString();
+    }
+    public void UpdateGameHUD(float remainingTime)
+    {
+        int aux = (int)remainingTime;
+        _remainingTime.text = aux.ToString();
+    }
+   
+    public void SetMenu(GameManager.GameStates newMenu)
+    {
+        for (int i = 0; i < _menus.Length; i++)
+        {
+            _menus[i].SetActive(false);
+        }
+        _menus[(int)newMenu].SetActive(true);
+        if ((int)newMenu == 1) Debug.Log("GaemHUD");
 
-    void MenuSetUp()
+    }
+    #endregion
+    private void Start()
+    {
+        _menus = new GameObject[3];
+        _menus[0] = _startMenu;
+        _menus[1] = _gameplayHUD;
+        _menus[2] = _gameOverMenu;
+        GameManager.Instance.RegisterUIManager(this);
+    }
+
+
+    /*
+
+    public void SetUpMenu()
     {
         // comentado porque no estan implementados aun, añadir luego 
         //_puntuacion.text = " " + _puntos;
@@ -49,6 +90,6 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         Timer();
-        MenuSetUp();
-    }
+        SetUpMenu();
+    }*/
 }

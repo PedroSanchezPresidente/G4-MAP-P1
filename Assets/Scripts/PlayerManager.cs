@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private GameObject _diedMario;//prefab mario muerto
 
-    private Transform _dMTransform;
+    
     #endregion
     #region Methods
     //Inicialización de Player Manager
@@ -101,13 +101,9 @@ public class PlayerManager : MonoBehaviour
             case PlayerStates.MUERTO:
 
                 //activar animacion de muerte
-                Destroy(gameObject);
                 //comprobar si las vidas
                 //if > 0, vidas--;
-                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-
-
-                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
+                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto 
                 //llamar al GameManager para deshabilitar scripts
                 break;
         }
@@ -117,8 +113,8 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _dMTransform = _diedMario.GetComponent<Transform>();
-        _currentState = PlayerStates.PEQUEÑO;
+        _currentState = PlayerStates.MUERTO;
+        _nextState = PlayerStates.PEQUEÑO;
     }
     // Update is called once per frame
     void Update()
