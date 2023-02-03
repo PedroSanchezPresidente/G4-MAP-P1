@@ -6,7 +6,7 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
-    private int _fpsLimit = 60;//Para no petar el PC un saludo
+    private int _fpsLimit = 60; //Para no petar el PC un saludo
     [SerializeField]
     private float _speed;
     [SerializeField]
@@ -14,11 +14,13 @@ public class MovementComponent : MonoBehaviour
     [SerializeField]
     private float _jumpForce;
     [SerializeField]
-    private float _downforce;//Se activa al dejar de presionar       
+    private float _downforce; //Se activa al dejar de presionar       
     [HideInInspector]
     public bool _onGround;
     [HideInInspector]
-    public bool blockHitted = false;  //Limitacion de bloques golpeados por salto
+    public bool _isRunning; //Se activa para correr
+    [HideInInspector]
+    public bool blockHitted = false; //Limitacion de bloques golpeados por salto
 
     private Animator animator;
     private SpriteRenderer _spriteRenderer;
@@ -44,10 +46,14 @@ public class MovementComponent : MonoBehaviour
     }
     public void Sprint() 
     {
+        _isRunning = true;
+        animator.SetBool("keyPressed", _isRunning);
         _maxSpeed = 7;
     }
     public void StopSprint()
     {
+        _isRunning = false;
+        animator.SetBool("keyPressed", _isRunning);
         _maxSpeed = 5;
     } 
 
@@ -79,7 +85,6 @@ public class MovementComponent : MonoBehaviour
         {
             animator.SetFloat("horizontal", _rigidbody2D.velocity.x);
         }
-        
     }
     private void FixedUpdate()
     {
