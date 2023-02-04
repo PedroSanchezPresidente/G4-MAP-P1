@@ -21,5 +21,9 @@ public class KillEnemy : MonoBehaviour
                 gameObject.GetComponent<KoopaComponent>().DeathWithShell();
             }
         }
+        else if (other.gameObject.layer == 8) //evalua si le ha dado una bola fuego
+        {
+            gameObject.GetComponent<goombaComponent>().Death();
+        }
     }
 }
