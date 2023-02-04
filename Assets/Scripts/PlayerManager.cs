@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private PlayerStates _currentState;
     //refencia estado siguiente
     private PlayerStates _nextState;
+    public PlayerStates _basicState = PlayerStates.PEQUEÑO;
     //refencia publica del estado actual
     public PlayerStates CurrentState { get { return _currentState; } }
     private Animator _animator;
