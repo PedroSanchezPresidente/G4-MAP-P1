@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     private GameObject[] _menus;
     #endregion
     #region methods
+
     public void SetUpGameHUD(float remainingTime)
     {
         int aux = (int)remainingTime;
@@ -42,7 +43,8 @@ public class UIManager : MonoBehaviour
             _menus[i].SetActive(false);
         }
         _menus[(int)newMenu].SetActive(true);
-        if ((int)newMenu == 1) Debug.Log("GaemHUD");
+
+        if ((int)newMenu == 1) Debug.Log("GameHUD");
 
     }
     #endregion

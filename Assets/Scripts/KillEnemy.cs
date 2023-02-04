@@ -12,11 +12,14 @@ public class KillEnemy : MonoBehaviour
         if (other.gameObject.tag == "Player")//evalua si choca con mario
         {
             other.GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpForce ;
-            gameObject.GetComponent<goombaComponent>().Death();
+            if (gameObject.tag == "Goomba")
+            {
+                gameObject.GetComponent<goombaComponent>().Death();
+            }
+            else if(gameObject.tag == "Koopa")
+            {
+                gameObject.GetComponent<KoopaComponent>().DeathWithShell();
+            }
         }
-                
-            
-
-       
     }
 }
