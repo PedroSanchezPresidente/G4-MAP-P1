@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _startMenu;
     [SerializeField] private GameObject _gameplayHUD;
     [SerializeField] private GameObject _gameOverMenu;
+    [SerializeField] private GameObject _retryMenu;
     #endregion
 
     #region properties
@@ -24,15 +25,20 @@ public class UIManager : MonoBehaviour
     private GameObject[] _menus;
     #endregion
     #region methods
-    public void SetUpGameHUD(float remainingTime)
+    public void SetUpGameHUD(float remainingTime, int lifes)
     {
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
+
+        _lifes.text = lifes.ToString();
     }
-    public void UpdateGameHUD(float remainingTime)
+    public void UpdateGameHUD(float remainingTime, int lifes)
     {
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
+
+        _lifes.text = lifes.ToString();
+
     }
    
     public void SetMenu(GameManager.GameStates newMenu)
@@ -48,10 +54,11 @@ public class UIManager : MonoBehaviour
     #endregion
     private void Start()
     {
-        _menus = new GameObject[3];
+        _menus = new GameObject[4];
         _menus[0] = _startMenu;
         _menus[1] = _gameplayHUD;
-        _menus[2] = _gameOverMenu;
+        _menus[2] = _retryMenu;
+        _menus[3] = _gameOverMenu;
         GameManager.Instance.RegisterUIManager(this);
     }
 
