@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,16 +13,8 @@ public class KoopaComponent : MonoBehaviour
     #region references
     [SerializeField]
     private GameObject _caparazon; // referencia al caparazon del koopa a spawnear
-    [SerializeField]
-    private Transform _shellSpawn;
     #endregion
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
     // Update is called once per frame
     void Update() // cambia el sentido del goomba en funcion del estado de la variable bool sentido
     {
@@ -35,14 +28,24 @@ public class KoopaComponent : MonoBehaviour
         }
 
     }
-    public void Death()
+    // Muere sin soltar caparazon
+    public void SimpleDeath()
     {
         Destroy(gameObject);
     }
-    public void DeathShell()
+    //Muerte con caparazon
+    public void DeathWithShell()
     {
         //instancia el caparazon justo antes de morir
-        Instantiate(_caparazon, _shellSpawn.position, Quaternion.identity);
+
         Destroy(gameObject);
+        //contador que espera 1 segundo para instanciar el caparazón
+        float temp = 1;
+        while(temp > 0)
+        {
+            temp -= Time.deltaTime;
+        }
+        Instantiate(_caparazon, this.transform.position, Quaternion.identity);
+        
     }
 }

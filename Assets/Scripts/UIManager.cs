@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     private GameObject[] _menus;
     #endregion
     #region methods
+    
     public void SetUpGameHUD(float remainingTime, int lifes)
     {
         int aux = (int)remainingTime;
@@ -48,7 +49,8 @@ public class UIManager : MonoBehaviour
             _menus[i].SetActive(false);
         }
         _menus[(int)newMenu].SetActive(true);
-        if ((int)newMenu == 1) Debug.Log("GaemHUD");
+
+        if ((int)newMenu == 1) Debug.Log("GameHUD");
 
     }
     #endregion
@@ -67,7 +69,7 @@ public class UIManager : MonoBehaviour
 
     public void SetUpMenu()
     {
-        // comentado porque no estan implementados aun, añadir luego 
+        // comentado porque no estan implementados aun, aÃ±adir luego 
         //_puntuacion.text = " " + _puntos;
         //_monedas.text = " " + _monedasCant;
         _tiempo.text = " " + (int)_currentTime;
