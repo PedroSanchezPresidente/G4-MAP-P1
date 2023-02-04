@@ -72,13 +72,12 @@ public class PlayerManager : MonoBehaviour
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
                 Destroy(gameObject);
-                //comprobar si las vidas
-                //if > 0, vidas--;
+                if (GameManager.Instance._lifes > 0)
+                {
+                    GameManager.Instance.Bajavida();
+                    GameManager.Instance.ChangeState(GameManager.GameStates.RETRY);
+                }
                 //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-                
-
-                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
-                //llamar al GameManager para deshabilitar scripts
                 break;
         }
         
