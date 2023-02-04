@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameStates { START, GAME, RETRY, GAMEOVER };
+    public enum GameStates { START, GAME, GAMEOVER };
 
     #region references
     private UIManager _UIManager;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     private GameManager.GameStates _nextState;
     public GameManager.GameStates CurrentState { get { return _currentState; } }
     private int _points;
-    public int _lifes;
+    private int _lifes;
     private float _remainingTime;
     private int _coins;
 
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         {
             case GameStates.GAME:
                 Debug.Log("GAME");
-                _UIManager.SetUpGameHUD(_remainingTime, _lifes);
+                _UIManager.SetUpGameHUD(_remainingTime);
                 break;
             case GameStates.START:
             case GameStates.GAMEOVER:
@@ -83,33 +83,22 @@ public class GameManager : MonoBehaviour
             case GameStates.GAME:
                 _remainingTime -= Time.deltaTime;
                 //Debug.Log("tempo");
-                if (_remainingTime < 0 && _lifes <= 0)
+                if (_remainingTime < 0)
                 {
                     PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
                     _nextState = GameStates.GAMEOVER;
                 }
-                _UIManager.UpdateGameHUD(_remainingTime, _lifes);
+                _UIManager.UpdateGameHUD(_remainingTime);
                 break;
             case GameStates.START:
             case GameStates.GAMEOVER:
                 break;
         }
     }
-
-    public void Bajavida()
-    {
-        _lifes--;
-    }
-
-    public void ChangeState(GameStates newstate)
-    {
-        _nextState = newstate;
-    }
     #endregion
     // Start is called before the first frame update
     void Start()
     {
-        _lifes = 3;
         _remainingTime = 400;
         _nextState = GameStates.GAME;
         _currentState = GameStates.START;
