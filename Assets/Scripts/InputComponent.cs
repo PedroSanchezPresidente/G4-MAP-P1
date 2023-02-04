@@ -6,12 +6,14 @@ public class InputComponent : MonoBehaviour
 {
     #region references
     private MovementComponent _movementComponent;
+    private FireMarioComponent _fireMarioComponent;
     #endregion
 
 
     void Start()
     {
         _movementComponent = GetComponent<MovementComponent>();
+        _fireMarioComponent = GetComponent<FireMarioComponent>();
     }
 
     void Update()
@@ -36,9 +38,10 @@ public class InputComponent : MonoBehaviour
         }
 
         // Sitema de correr y disparar
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             _movementComponent.Sprint();
+            _fireMarioComponent.Fire();
         }
         // Devuelve la velocidad normal cuando se suelta el boton
         if (Input.GetKeyUp(KeyCode.LeftControl))

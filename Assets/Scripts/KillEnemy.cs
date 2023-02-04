@@ -14,9 +14,9 @@ public class KillEnemy : MonoBehaviour
             other.GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpForce ;
             gameObject.GetComponent<goombaComponent>().Death();
         }
-                
-            
-
-       
+        else if (other.gameObject.layer == 8) //evalua si le ha dado una bola fuego
+        {
+            gameObject.GetComponent<goombaComponent>().Death();
+        }
     }
 }
