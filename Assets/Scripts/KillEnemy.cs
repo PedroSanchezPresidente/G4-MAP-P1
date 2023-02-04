@@ -9,14 +9,20 @@ public class KillEnemy : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")//evalua si choca con mario
+        if (other.gameObject.tag == "Player" )//evalua si choca con mario
         {
-            other.GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpForce ;
-            gameObject.GetComponent<goombaComponent>().Death();
+            other.GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpForce;
+
+            if (gameObject.tag == "Goomba") //si choca con bola de fuego
+            {
+                gameObject.GetComponent<goombaComponent>().Death();
+            }
+            else if (gameObject.tag == "Koopa" )
+            {
+                gameObject.GetComponent<KoopaComponent>().ShellDeath();
+            }
         }
-        else if (other.gameObject.layer == 8) //evalua si le ha dado una bola fuego
-        {
-            gameObject.GetComponent<goombaComponent>().Death();
-        }
+        else if  (other.gameObject.layer == 8) Destroy(other.gameObject);
+       
     }
 }
