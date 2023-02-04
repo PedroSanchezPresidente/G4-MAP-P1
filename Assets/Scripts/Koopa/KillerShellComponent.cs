@@ -8,7 +8,7 @@ public class KillerShellComponent : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") //evalua si choca con mario
         {
-            PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
+            //gameObject.GetComponent<>().Death();
         }
         else if (other.gameObject.tag == "Goomba")
         {
@@ -16,7 +16,7 @@ public class KillerShellComponent : MonoBehaviour
         }
         else if (other.gameObject.tag == "Koopa")
         {
-            other.GetComponent<KoopaComponent>().SimpleDeath();
+            other.GetComponent<KoopaComponent>().Death();
         }
     }
 }

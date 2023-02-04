@@ -14,7 +14,6 @@ public class KillPlayerComponent : MonoBehaviour
             {
                 case PlayerManager.PlayerStates.PEQUEÑO:
                     PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
-                    
                     break;
                 case PlayerManager.PlayerStates.GRANDE:
                     PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.PEQUEÑO);
@@ -26,6 +25,7 @@ public class KillPlayerComponent : MonoBehaviour
                     break;
             }
             Debug.Log(PlayerManager.Instance.CurrentState);
+
         }
     }
 }
