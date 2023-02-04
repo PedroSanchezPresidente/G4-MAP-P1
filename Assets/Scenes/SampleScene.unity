@@ -362,10 +362,10 @@ PrefabInstance:
     - target: {fileID: 3979669419828834076, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -1359754457, guid: 08a811886088b5c45be623a4ffdbf1de, type: 3}
     - target: {fileID: 3979669419828834076, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3979669419828834079, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
       propertyPath: speed
@@ -746,6 +746,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &580028935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580028936}
+  m_Layer: 6
+  m_Name: FireSpawnPointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580028936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580028935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1659911652}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587445974
 GameObject:
@@ -10215,6 +10246,37 @@ MonoBehaviour:
   _horizontalOffset: -13.5
   _targetTransform: {fileID: 1659911652}
   _cameraTransform: {fileID: 519420032}
+--- !u!1 &1537776964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537776965}
+  m_Layer: 6
+  m_Name: FireSpawnPointRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537776965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537776964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1659911652}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545611697
 GameObject:
   m_ObjectHideFlags: 0
@@ -10394,6 +10456,7 @@ GameObject:
   - component: {fileID: 1659911652}
   - component: {fileID: 1659911651}
   - component: {fileID: 1659911661}
+  - component: {fileID: 1659911662}
   - component: {fileID: 1659911654}
   - component: {fileID: 1659911655}
   - component: {fileID: 1659911656}
@@ -10471,6 +10534,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1890337841}
+  - {fileID: 1537776965}
+  - {fileID: 580028936}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10586,6 +10651,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentState: 0
   _diedMario: {fileID: 6229410767059357597, guid: 3170bdd4f0d687d4490892d33e2cb5f1, type: 3}
+--- !u!114 &1659911662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659911649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dacd24efe3dffc4e8714a1d30b59da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPointRight: {fileID: 1537776965}
+  _spawnPointLeft: {fileID: 580028936}
+  _fireRight: {fileID: 6064084954095407283, guid: ca8ea023c6f592448ac4748f810a46f5, type: 3}
+  _fireLeft: {fileID: 6064084954095407283, guid: 55d49e44968dc484298261dd428a1de0, type: 3}
+  _speed: 20
 --- !u!1 &1736218011
 GameObject:
   m_ObjectHideFlags: 0
