@@ -12,14 +12,16 @@ public class KoopaComponent : MonoBehaviour
     #region references
     [SerializeField]
     private GameObject _caparazon; // referencia al caparazon del koopa a spawnear
-    
+    [SerializeField]
+    private Transform _shellSpawn;
+    private Animator _animator;
     #endregion
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        _animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update() // cambia el sentido del goomba en funcion del estado de la variable bool sentido
@@ -27,21 +29,26 @@ public class KoopaComponent : MonoBehaviour
         if (sentido)
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+            GetComponent<SpriteRenderer>().flipX = false;
         }
 
     }
-    public void SimpleDeath()
+
+        public void Death()
     {
+        _animator.SetBool("killed", true);
         Destroy(gameObject);
     }
     public void ShellDeath()
     {
         //instancia el caparazon justo antes de morir
-        Instantiate(_caparazon, this.transform.position, Quaternion.identity);
+        Instantiate(_caparazon, _shellSpawn.position, Quaternion.identity);
+        _animator.SetBool("killed", true);
         Destroy(gameObject);
     }
 }

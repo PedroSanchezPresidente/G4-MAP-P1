@@ -79,14 +79,11 @@ public class PlayerManager : MonoBehaviour
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
                 _soundManager.AudioSelection(4, 0.5f);
-                GoToSpawn();
-                //comprobar si las vidas
-                //if > 0, vidas--;
-                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-                
-
-                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
-                //llamar al GameManager para deshabilitar scripts
+                if (GameManager.Instance._lifes > 0)
+                {
+                    GameManager.Instance.BajaVida();
+                    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
+                }
                 break;
         }
         
@@ -110,7 +107,6 @@ public class PlayerManager : MonoBehaviour
                 this.GetComponent<KillPlayerComponent>().enabled = true;
                 break;
             case PlayerStates.MUERTO:
-
                 break;
         }
     }

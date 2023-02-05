@@ -16,7 +16,7 @@ public class KillerShellComponent : MonoBehaviour
         }
         else if (other.gameObject.tag == "Koopa")
         {
-            other.GetComponent<KoopaComponent>().SimpleDeath();
+            other.GetComponent<KoopaComponent>().Death();
         }
     }
 }
