@@ -86,9 +86,11 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("tempo");
                 if (_remainingTime < 0 || _lifes <= 0)
                 {
-                    PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
                     _nextState = GameStates.GAMEOVER;
                 }
+                _UIManager.UpdateGameHUD(_remainingTime, _lifes);
+                break;
+            case GameStates.RETRY:
                 _UIManager.UpdateGameHUD(_remainingTime, _lifes);
                 break;
             case GameStates.START:
@@ -117,7 +119,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _lifes = 3;
         _remainingTime = 400;
         _nextState = GameStates.START;
         _currentState = GameStates.GAMEOVER;

@@ -116,8 +116,8 @@ GameObject:
   - component: {fileID: 3904860692865112063}
   - component: {fileID: 3904860692865112060}
   - component: {fileID: 3904860692865112061}
-  - component: {fileID: 3904860692865112058}
   - component: {fileID: 3904860692865111939}
+  - component: {fileID: 7255106588621150408}
   m_Layer: 0
   m_Name: koopa
   m_TagString: Koopa
@@ -282,19 +282,6 @@ MonoBehaviour:
   speed: 1
   _caparazon: {fileID: 8001919685389413097, guid: fed5f8487f400a64c92af74880a72914, type: 3}
   _shellSpawn: {fileID: 3904860691474734176}
---- !u!114 &3904860692865112058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3904860692865112059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a62139af86fb743a4cd4503a7f510c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _jumpForce: 7
 --- !u!95 &3904860692865111939
 Animator:
   serializedVersion: 4
@@ -315,3 +302,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7255106588621150408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904860692865112059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64862d4966a4def4b9468856d81cbfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpForce: 7
