@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     //MENUS
     [SerializeField] private GameObject _startMenu;
     [SerializeField] private GameObject _gameplayHUD;
+    [SerializeField] private GameObject _retryMenu;
     [SerializeField] private GameObject _gameOverMenu;
     #endregion
 
@@ -24,16 +25,26 @@ public class UIManager : MonoBehaviour
     private GameObject[] _menus;
     #endregion
     #region methods
-    public void SetUpGameHUD(float remainingTime)
+    public void SetUpGameHUD(float remainingTime, int lifes)
     {
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
+
+        _lifes.text = lifes.ToString();
     }
-    public void UpdateGameHUD(float remainingTime)
+    public void UpdateGameHUD(float remainingTime, int lifes)
     {
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
+
+        _lifes.text = lifes.ToString();
     }
+
+    public void RequestStateChange(int newState)
+    {
+        GameManager.Instance.RequestStateChange((GameManager.GameStates) newState);
+    }
+
    
     public void SetMenu(GameManager.GameStates newMenu)
     {
@@ -48,12 +59,14 @@ public class UIManager : MonoBehaviour
     #endregion
     private void Start()
     {
-        _menus = new GameObject[3];
-        _menus[0] = _startMenu;
-        _menus[1] = _gameplayHUD;
-        _menus[2] = _gameOverMenu;
+        _menus = new GameObject[4];
+        _menus[(int)GameManager.GameStates.START] = _startMenu;
+        _menus[(int)GameManager.GameStates.GAME] = _gameplayHUD;
+        _menus[(int)GameManager.GameStates.RETRY] = _retryMenu;
+        _menus[(int)GameManager.GameStates.GAMEOVER] = _gameOverMenu;
         GameManager.Instance.RegisterUIManager(this);
     }
+
 
 
     /*
