@@ -7870,16 +7870,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 9, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 4294967295
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 3
-      dummyAlignment: 0
-      m_AllTileFlags: 2147483650
   - first: {x: 178, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -8158,7 +8148,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a898d0216381a4041826a6559f4e4e9c, type: 2}
   - m_RefCount: 88
     m_Data: {fileID: 11400000, guid: c00b3d3ed1d0aff4498056b3fd215f1e, type: 2}
-  - m_RefCount: 11
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 2b8d4ec100a5d80459287d55225e20a9, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d99c84c07f5afdc4282b52aa12447f37, type: 2}
@@ -8180,7 +8170,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 154271688, guid: f5ffd38c2954a8c439f681b0c876f4ba, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 600
+  - m_RefCount: 599
     m_Data:
       e00: 1
       e01: 0
@@ -8199,7 +8189,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 600
+  - m_RefCount: 599
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray:
   - m_RefCount: 1
@@ -8208,7 +8198,7 @@ Tilemap:
     m_Data: {fileID: 8246211858504202373, guid: badee620eacc722479ea65bd05813b80, type: 3}
   - m_RefCount: 28
     m_Data: {fileID: 8246211858504202373, guid: 43f23e3dca9de204f87ee6bf572392e1, type: 3}
-  - m_RefCount: 13
+  - m_RefCount: 12
     m_Data: {fileID: 8246211858504202373, guid: 38a9934f72d6df5468640033ea35bbc7, type: 3}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11334,14 +11324,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1736218012}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 62358244}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: RequestStateChange
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12681,8 +12671,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1736218012}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 62358244}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: RequestStateChange
         m_Mode: 3
         m_Arguments:
