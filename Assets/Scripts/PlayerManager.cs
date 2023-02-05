@@ -79,11 +79,6 @@ public class PlayerManager : MonoBehaviour
                 }
 
 
-                GoToSpawn();
-                //comprobar si las vidas
-                //if > 0, vidas--;
-                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-                //llamar al GameManager para deshabilitar scripts
                 break;
         }
         
