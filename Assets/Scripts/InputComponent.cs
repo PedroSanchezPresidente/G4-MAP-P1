@@ -48,5 +48,31 @@ public class InputComponent : MonoBehaviour
         {
             _movementComponent.StopSprint();
         }
+
+        if(Input.GetAxis("Horizontal") > 0)
+        {
+            _movementComponent.Right();
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            _movementComponent.Left();
+        }
+        
+        if (Input.GetButtonDown("Fire2"))
+        {
+            _movementComponent.Jump();
+        }
+
+        if (Input.GetButtonDown("R2"))
+        {
+            _movementComponent.Sprint();
+            _fireMarioComponent.Fire();
+        }
+
+        if (Input.GetButtonUp("R2"))
+        {
+            _movementComponent.StopSprint();
+        }
     }
 }
