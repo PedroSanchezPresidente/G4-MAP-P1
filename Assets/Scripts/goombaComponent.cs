@@ -46,6 +46,10 @@ public class goombaComponent : MonoBehaviour
                 sentido = true;
             }
         }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("ScreenLimits"))
+        {
+            Death();
+        }
     }
 
     public void Death()
