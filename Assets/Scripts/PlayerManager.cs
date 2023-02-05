@@ -29,7 +29,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private GameObject _diedMario;//prefab mario muerto
 
-    private Transform _dMTransform;
+    [SerializeField]
+    private GameObject _spawn;
     #endregion
     #region Methods
     //Inicialización de Player Manager
@@ -47,6 +48,10 @@ public class PlayerManager : MonoBehaviour
     public void ChangeState(PlayerStates nextState)
     {
         _nextState = nextState;
+    }
+    private void GoToSpawn()
+    {
+        this.transform.position = _spawn.transform.position;
     }
     private void EnterState(PlayerStates newState)
     {
@@ -78,7 +83,6 @@ public class PlayerManager : MonoBehaviour
                     GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
                 }
 
-
                 break;
         }
         
@@ -102,8 +106,6 @@ public class PlayerManager : MonoBehaviour
                 this.GetComponent<KillPlayerComponent>().enabled = true;
                 break;
             case PlayerStates.MUERTO:
-
-                
                 break;
         }
     }
@@ -112,7 +114,6 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _dMTransform = _diedMario.GetComponent<Transform>();
         _currentState = PlayerStates.PEQUEÑO;
     }
     // Update is called once per frame
