@@ -12,8 +12,7 @@ public class KoopaComponent : MonoBehaviour
     #region references
     [SerializeField]
     private GameObject _caparazon; // referencia al caparazon del koopa a spawnear
-    [SerializeField]
-    private Transform _shellSpawn;
+    
     #endregion
 
 
@@ -35,14 +34,14 @@ public class KoopaComponent : MonoBehaviour
         }
 
     }
-    public void Death()
+    public void SimpleDeath()
     {
         Destroy(gameObject);
     }
-    public void DeathShell()
+    public void ShellDeath()
     {
         //instancia el caparazon justo antes de morir
-        Instantiate(_caparazon, _shellSpawn.position, Quaternion.identity);
+        Instantiate(_caparazon, this.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
