@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
             case GameStates.GAME:
                 Debug.Log("GAME");
                 _UIManager.SetUpGameHUD(_remainingTime, _lifes);
+                PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.PEQUEÑO);
                 break;
             case GameStates.START:
             case GameStates.GAMEOVER:
