@@ -44,7 +44,7 @@ public class KoopaComponent : MonoBehaviour
         _animator.SetBool("killed", true);
         Destroy(gameObject);
     }
-    public void DeathShell()
+    public void ShellDeath()
     {
         //instancia el caparazon justo antes de morir
         Instantiate(_caparazon, _shellSpawn.position, Quaternion.identity);
