@@ -14,6 +14,7 @@ public class MovementComponent : MonoBehaviour
     private float _speed;
 =======
     private Rigidbody2D _rigidbody2D;
+    private SoundManager _soundManager;
     private int _fpsLimit = 60; //Para no petar el PC un saludo
     [SerializeField]
     private float _speed;
@@ -137,7 +138,8 @@ public class MovementComponent : MonoBehaviour
     public void Jump()
     {
         if (_onGround)
-        {           
+        {            
+            _soundManager.AudioSelection(0, 0.5f);
             _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);           
         }
     }
@@ -151,8 +153,10 @@ public class MovementComponent : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        _soundManager = SoundManager.Instance;
         _onGround = true;
         _maxSpeed = 5;
+        
     }
     // Update is called once per frame
     void Update()

@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
     //refencia publica del estado actual
     public PlayerStates CurrentState { get { return _currentState; } }
     private Animator _animator;
+    private SoundManager _soundManager;
     [SerializeField]
     private GameObject _diedMario;//prefab mario muerto
 
@@ -74,6 +75,7 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
+                _soundManager.AudioSelection(1, 0.5f);
                 Destroy(gameObject);
                 //comprobar si las vidas
                 //if > 0, vidas--;
@@ -122,6 +124,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _soundManager = SoundManager.Instance;
         _animator = GetComponent<Animator>();
         _dMTransform = _diedMario.GetComponent<Transform>();
         _currentState = PlayerStates.PEQUEÑO;

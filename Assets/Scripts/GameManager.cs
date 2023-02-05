@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     #region references
     private UIManager _UIManager;
+    private SoundManager _soundManager;
 
     [SerializeField] GameObject _player;
     #endregion
@@ -32,8 +33,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (_instance == null)
-        {
-            _instance = this;
+        {                   
+            _instance = this;            
         }
         else
         {
@@ -82,7 +83,15 @@ public class GameManager : MonoBehaviour
         {
             case GameStates.GAME:
                 _remainingTime -= Time.deltaTime;
+<<<<<<< Updated upstream
                 Debug.Log("tempo");
+=======
+                //Debug.Log("tempo");
+                if (_remainingTime < 4.01 && _remainingTime > 4)
+                {
+                    _soundManager.AudioSelection(5, 0.8f);
+                }
+>>>>>>> Stashed changes
                 if (_remainingTime < 0)
                 {
                     PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
@@ -90,7 +99,7 @@ public class GameManager : MonoBehaviour
                 }
                 _UIManager.UpdateGameHUD(_remainingTime);
                 break;
-            case GameStates.START:
+            case GameStates.START:                                            
             case GameStates.GAMEOVER:
                 break;
         }
@@ -99,6 +108,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _soundManager = SoundManager.Instance;
         _remainingTime = 400;
         _nextState = GameStates.GAME;
         _currentState = GameStates.START;
