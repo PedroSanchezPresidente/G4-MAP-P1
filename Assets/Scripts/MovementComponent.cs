@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private SoundManager _soundManager;
     private int _fpsLimit = 60; //Para no petar el PC un saludo
     [SerializeField]
     private float _speed;
@@ -61,7 +62,8 @@ public class MovementComponent : MonoBehaviour
     public void Jump()
     {
         if (_onGround)
-        {           
+        {
+            _soundManager.AudioSelection(0, 0.5f);
             _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);           
         }
     }
@@ -71,6 +73,7 @@ public class MovementComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _soundManager = SoundManager.Instance;
         Application.targetFrameRate = _fpsLimit;//limitador, no quitar
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();

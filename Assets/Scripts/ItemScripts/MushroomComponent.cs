@@ -7,11 +7,14 @@ public class MushroomComponent : MonoBehaviour
     [SerializeField] float itemSpeed;
     private Rigidbody2D _itemRigidbody;
     private Animator _animator;
+    private SoundManager _soundManager;
 
     public void Begin()
     {
+        _soundManager = SoundManager.Instance;
         _itemRigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _soundManager.AudioSelection(2, 0.5f);
     }
     private void FixedUpdate()
     {
@@ -27,6 +30,7 @@ public class MushroomComponent : MonoBehaviour
         {
             if (PlayerManager.Instance.CurrentState == PlayerManager.PlayerStates.PEQUEÑO)
             {
+                _soundManager.AudioSelection(1, 0.5f);
                 PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
                 Destroy(gameObject);
             }
