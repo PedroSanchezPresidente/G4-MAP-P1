@@ -22,7 +22,6 @@ public class KillEnemy : MonoBehaviour
                 gameObject.GetComponent<KoopaComponent>().ShellDeath();
             }
         }
-        else if  (other.gameObject.layer == 8) Destroy(other.gameObject);
        
     }
 }
