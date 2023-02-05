@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     #region Properties
     //Instancia del Player Manager
     static private PlayerManager _instance;
+    private SoundManager _soundManager;
     //Public renference of Player Manager
     static public PlayerManager Instance { get { return _instance; } }
     //referencia estadi actual
@@ -77,12 +78,12 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
+                _soundManager.AudioSelection(4, 0.5f);
                 if (GameManager.Instance._lifes > 0)
                 {
                     GameManager.Instance.BajaVida();
                     GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
                 }
-
                 break;
         }
         
@@ -119,6 +120,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _soundManager = SoundManager.Instance;
         if (_nextState != _currentState)
         {
             ExitState(_currentState);
