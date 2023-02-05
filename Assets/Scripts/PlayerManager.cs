@@ -84,6 +84,7 @@ public class PlayerManager : MonoBehaviour
                     GameManager.Instance.BajaVida();
                     GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
                 }
+                GoToSpawn();
                 break;
         }
         
