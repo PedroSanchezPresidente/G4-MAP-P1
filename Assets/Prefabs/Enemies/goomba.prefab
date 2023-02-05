@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 3979669419828834077}
   - component: {fileID: 3979669419828834078}
   - component: {fileID: 3979669419828834079}
-  - component: {fileID: 3979669419828834049}
-  - component: {fileID: 3979669419828834050}
   - component: {fileID: 8909176121888840894}
   m_Layer: 0
   m_Name: goomba
@@ -191,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b7d8cee14e47647bbaf189e80b17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 7
+  speed: 0
 --- !u!95 &8909176121888840894
 Animator:
   serializedVersion: 4
