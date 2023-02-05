@@ -12,7 +12,10 @@ public class goombaComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (speed < 0)
+        {
+            sentido = false;
+        }
     }
 
     // Update is called once per frame
