@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private SoundManager _soundManager;
     private int _fpsLimit = 60; //Para no petar el PC un saludo
     [SerializeField]
     private float _speed;
@@ -17,6 +18,8 @@ public class MovementComponent : MonoBehaviour
     private float _downforce; //Se activa al dejar de presionar       
     [HideInInspector]
     public bool _onGround;
+    [HideInInspector]
+    public bool _isRunning; //Se activa para correr
     [HideInInspector]
     public bool blockHitted = false; //Limitacion de bloques golpeados por salto
 
@@ -44,12 +47,14 @@ public class MovementComponent : MonoBehaviour
     }
     public void Sprint() 
     {
-        animator.SetBool("keyPressed", true);
+        _isRunning = true;
+        animator.SetBool("keyPressed", _isRunning);
         _maxSpeed = 7;
     }
     public void StopSprint()
     {
-        animator.SetBool("keyPressed", false);
+        _isRunning = false;
+        animator.SetBool("keyPressed", _isRunning);
         _maxSpeed = 5;
     } 
 
@@ -57,7 +62,8 @@ public class MovementComponent : MonoBehaviour
     public void Jump()
     {
         if (_onGround)
-        {           
+        {
+            _soundManager.AudioSelection(0, 0.5f);
             _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);           
         }
     }
@@ -67,6 +73,7 @@ public class MovementComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _soundManager = SoundManager.Instance;
         Application.targetFrameRate = _fpsLimit;//limitador, no quitar
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();

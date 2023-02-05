@@ -45,7 +45,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 644728294, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
-    - {fileID: 680004859, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
+    - {fileID: 1071706410, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
     - {fileID: 1071706410, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

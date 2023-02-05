@@ -202,6 +202,7 @@ MonoBehaviour:
   _fireFlowerPrefab: {fileID: 0}
   isActivated: 0
   containsMushroom: 1
+  containsFireFlower: 0
 --- !u!95 &7074508233811014166
 Animator:
   serializedVersion: 4

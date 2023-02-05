@@ -16,19 +16,22 @@ public class PlayerManager : MonoBehaviour
     #region Properties
     //Instancia del Player Manager
     static private PlayerManager _instance;
+    private SoundManager _soundManager;
     //Public renference of Player Manager
     static public PlayerManager Instance { get { return _instance; } }
     //referencia estadi actual
     [SerializeField] private PlayerStates _currentState;
     //refencia estado siguiente
     private PlayerStates _nextState;
+    public PlayerStates _basicState = PlayerStates.PEQUEÑO;
     //refencia publica del estado actual
     public PlayerStates CurrentState { get { return _currentState; } }
     private Animator _animator;
     [SerializeField]
     private GameObject _diedMario;//prefab mario muerto
 
-    private Transform _dMTransform;
+    [SerializeField]
+    private GameObject _spawn;
     #endregion
     #region Methods
     //Inicialización de Player Manager
@@ -46,6 +49,10 @@ public class PlayerManager : MonoBehaviour
     public void ChangeState(PlayerStates nextState)
     {
         _nextState = nextState;
+    }
+    private void GoToSpawn()
+    {
+        this.transform.position = _spawn.transform.position;
     }
     private void EnterState(PlayerStates newState)
     {
@@ -71,14 +78,13 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
-                Destroy(gameObject);
-                //comprobar si las vidas
-                //if > 0, vidas--;
-                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-                
-
-                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
-                //llamar al GameManager para deshabilitar scripts
+                _soundManager.AudioSelection(4, 0.5f);
+                if (GameManager.Instance._lifes > 0)
+                {
+                    GameManager.Instance.BajaVida();
+                    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
+                }
+                GoToSpawn();
                 break;
         }
         
@@ -102,16 +108,6 @@ public class PlayerManager : MonoBehaviour
                 this.GetComponent<KillPlayerComponent>().enabled = true;
                 break;
             case PlayerStates.MUERTO:
-
-                //activar animacion de muerte
-                Destroy(gameObject);
-                //comprobar si las vidas
-                //if > 0, vidas--;
-                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-
-
-                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
-                //llamar al GameManager para deshabilitar scripts
                 break;
         }
     }
@@ -120,12 +116,12 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _dMTransform = _diedMario.GetComponent<Transform>();
         _currentState = PlayerStates.PEQUEÑO;
     }
     // Update is called once per frame
     void Update()
     {
+        _soundManager = SoundManager.Instance;
         if (_nextState != _currentState)
         {
             ExitState(_currentState);
