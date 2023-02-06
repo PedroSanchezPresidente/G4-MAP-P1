@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class goombaComponent : MonoBehaviour
 {
+    private SoundManager _soundManager;
     public int speed;
     
     private bool sentido; // si el sentido es false el goomba se mueve a la izquierda, pero si esta en true se mueve a la derecha
@@ -12,6 +13,7 @@ public class goombaComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _soundManager = SoundManager.Instance;
         if (speed < 0)
         {
             sentido = false;
@@ -54,6 +56,7 @@ public class goombaComponent : MonoBehaviour
 
     public void Death()
     {
+        _soundManager.AudioSelection(14, 0.4f);
         Destroy(gameObject);
     }
 }

@@ -64,15 +64,15 @@ public class InputComponent : MonoBehaviour
             _movementComponent.Jump();
         }
 
-        if (Input.GetButtonDown("R2"))
+        /*if (Input.GetButtonDown("R2"))
         {
             _movementComponent.Sprint();
             _fireMarioComponent.Fire();
-        }
+        }*/
 
-        if (Input.GetButtonUp("R2"))
+       /* if (Input.GetButtonUp("R2"))
         {
             _movementComponent.StopSprint();
-        }
+        }*/
     }
 }

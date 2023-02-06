@@ -78,6 +78,7 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
+                _soundManager.StopAudio();
                 _soundManager.AudioSelection(4, 0.5f);
                 if (GameManager.Instance._lifes > 0)
                 {
