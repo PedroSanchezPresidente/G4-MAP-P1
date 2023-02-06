@@ -92,11 +92,9 @@ public class MovementComponent : MonoBehaviour
     private void FixedUpdate()
     {
         animator.SetBool("onGround", _onGround);
-        if (!Input.GetKey(KeyCode.Space) && !_onGround)//Salto a distintas alturas si mantienes, (bajada)
+        if (!Input.GetKey(KeyCode.Space) && !Input.GetButton("Fire2") && !_onGround)//Salto a distintas alturas si mantienes, (bajada)
         {
             _rigidbody2D.AddForce(Vector2.down * _downforce, ForceMode2D.Impulse);
         }
     }
-
-
 }
