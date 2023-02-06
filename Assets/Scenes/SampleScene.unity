@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 869453158}
   - component: {fileID: 869453157}
   - component: {fileID: 869453159}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Blocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11154,7 +11154,7 @@ GameObject:
   - component: {fileID: 1278625938}
   - component: {fileID: 1278625937}
   - component: {fileID: 1278625939}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11360,6 +11360,99 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &1286522958
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2243016982045078065, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834049, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834049, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834051, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834072, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_Name
+      value: goomba (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834072, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834076, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1471547002, guid: a3a0d6e0e1668ea48b788a989d6bd44a, type: 3}
+    - target: {fileID: 3979669419828834076, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834077, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834077, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979669419828834079, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea7e9df1a0c00044fae19b50bf3893bf, type: 3}
 --- !u!1 &1293314633
 GameObject:
   m_ObjectHideFlags: 0
@@ -12004,6 +12097,7 @@ MonoBehaviour:
   _basicState: 0
   _diedMario: {fileID: 6229410767059357597, guid: 3170bdd4f0d687d4490892d33e2cb5f1, type: 3}
   _spawn: {fileID: 2000435995}
+  _camera: {fileID: 519420030}
 --- !u!114 &1659911662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12694,7 +12788,7 @@ GameObject:
   - component: {fileID: 1890337844}
   m_Layer: 6
   m_Name: Feet
-  m_TagString: Untagged
+  m_TagString: Foot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12707,7 +12801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890337840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.58199996, z: 0}
+  m_LocalPosition: {x: 0, y: -0.569, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12827,7 +12921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000435995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 0.18, z: 0}
+  m_LocalPosition: {x: -2.68, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
