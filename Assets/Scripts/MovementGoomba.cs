@@ -8,7 +8,7 @@ public class MovementGoomba : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Cambia?");
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bloques"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bloques") || collision.gameObject.layer == 9)
         {
             Debug.Log("Cambia");
             if (_goombaComponent.sentido)
