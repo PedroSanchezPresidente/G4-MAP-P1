@@ -47,4 +47,9 @@ public class FollowCamera : MonoBehaviour
         
 
     }
+
+    public void ResetCamera()
+    {
+        _myTransform.position = new Vector3(3.86999989f, 2.54999995f, -10f);
+    }
 }

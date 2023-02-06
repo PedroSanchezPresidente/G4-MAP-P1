@@ -120,8 +120,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _remainingTime = 400;
-        _nextState = GameStates.START;
-        _currentState = GameStates.GAMEOVER;
+        _nextState = GameStates.GAME;
+        _currentState = GameStates.START;
     }
 
     // Update is called once per frame

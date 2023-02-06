@@ -8,7 +8,7 @@ public class VoidDeath : MonoBehaviour
     {
         if( collision != null)
         {
-            if(collision.gameObject.tag == "Player")
+            if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Foot")
             {
                 PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
             }

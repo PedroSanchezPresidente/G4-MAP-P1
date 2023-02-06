@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -32,6 +31,9 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField]
     private GameObject _spawn;
+
+    [SerializeField]
+    private FollowCamera _camera;
     #endregion
     #region Methods
     //Inicialización de Player Manager
@@ -53,6 +55,7 @@ public class PlayerManager : MonoBehaviour
     private void GoToSpawn()
     {
         this.transform.position = _spawn.transform.position;
+        _camera.ResetCamera();
     }
     private void EnterState(PlayerStates newState)
     {
@@ -77,13 +80,15 @@ public class PlayerManager : MonoBehaviour
                 GetComponent<KillPlayerComponent>().enabled = false;
                 break;
             case PlayerStates.MUERTO:
+                GetComponent<MovementComponent>().enabled = false;
                 _animator.SetBool("isDead", true);
                 _soundManager.AudioSelection(4, 0.5f);
-                if (GameManager.Instance._lifes > 0)
-                {
-                    GameManager.Instance.BajaVida();
-                    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
-                }
+                //if (GameManager.Instance._lifes > 0)
+                //{
+                //    GameManager.Instance.BajaVida();
+                //    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
+                //}
+                GameManager.Instance.RequestStateChange(GameManager.GameStates.GAMEOVER);
                 GoToSpawn();
                 break;
         }
@@ -108,6 +113,7 @@ public class PlayerManager : MonoBehaviour
                 this.GetComponent<KillPlayerComponent>().enabled = true;
                 break;
             case PlayerStates.MUERTO:
+
                 break;
         }
     }
