@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d536093a4243e054bb663cfa9e9204b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSpeed: 200
+  itemSpeed: 4
 --- !u!50 &-108338347648383541
 Rigidbody2D:
   serializedVersion: 4
@@ -113,10 +113,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 20
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 0fe8ad2d63a9cd249b9c0214ecf6aae3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
