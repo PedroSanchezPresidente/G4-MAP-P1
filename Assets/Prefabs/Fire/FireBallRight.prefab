@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6064084954095407244}
   - component: {fileID: 6064084954095407245}
   - component: {fileID: 6064084954095407282}
-  - component: {fileID: -1393071651046051091}
+  - component: {fileID: 6011152012789384451}
   m_Layer: 8
   m_Name: FireBallRight
   m_TagString: Untagged
@@ -135,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &-1393071651046051091
+--- !u!114 &6011152012789384451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8531c697a5c574b8ff15b9d0012f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bounciness: 15
 --- !u!1 &6064084954494013276
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +194,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25728676, y: 0.017045625}
+  m_Offset: {x: 0.25728676, y: 0.01491753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -204,7 +205,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08000487, y: 0.49353248}
+  m_Size: {x: 0.08000487, y: 0.4254344}
   m_EdgeRadius: 0
 --- !u!114 &6064084954494013278
 MonoBehaviour:
