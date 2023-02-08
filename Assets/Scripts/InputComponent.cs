@@ -26,7 +26,7 @@ public class InputComponent : MonoBehaviour
        
 
         // Sistema de movimiento
-        if (Input.GetKey(KeyCode.D) || Input.GetAxis("DPadY") > 0 || Input.GetAxis("Horizontal") > 0)
+        if (Input.GetKey(KeyCode.D) || Input.GetAxis("DPadX") > 0 || Input.GetAxis("Horizontal") > 0)
         {
             _movementComponent.Right();
 
