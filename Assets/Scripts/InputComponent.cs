@@ -19,58 +19,32 @@ public class InputComponent : MonoBehaviour
     void Update()
     {
         // Sistema de salto
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2"))
         {
             _movementComponent.Jump();
         }
        
 
         // Sistema de movimiento
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetAxis("DPadY") > 0 || Input.GetAxis("Horizontal") > 0)
         {
             _movementComponent.Right();
 
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetAxis("DPadX") < 0 || Input.GetAxis("Horizontal") < 0)
         {
             _movementComponent.Left();
 
         }
 
         // Sitema de correr y disparar
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Circle"))
         {
             _movementComponent.Sprint();
             _fireMarioComponent.Fire();
         }
         // Devuelve la velocidad normal cuando se suelta el boton
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            _movementComponent.StopSprint();
-        }
-
-        if(Input.GetAxis("Horizontal") > 0)
-        {
-            _movementComponent.Right();
-        }
-
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            _movementComponent.Left();
-        }
-        
-        if (Input.GetButtonDown("Fire2"))
-        {
-            _movementComponent.Jump();
-        }
-
-        if (Input.GetButtonDown("R2"))
-        {
-            _movementComponent.Sprint();
-            _fireMarioComponent.Fire();
-        }
-
-        if (Input.GetButtonUp("R2"))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetButtonUp("Circle"))
         {
             _movementComponent.StopSprint();
         }
