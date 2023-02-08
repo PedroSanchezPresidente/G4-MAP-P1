@@ -11,11 +11,14 @@ public class BlockComponent : MonoBehaviour
     private GameObject _mushroomPrefab;
     [SerializeField]
     private GameObject _fireFlowerPrefab;
+    [SerializeField]
+    private GameObject _coinPrefab;
     private Animator _animator;
     public bool isActivated = false;
 
     public bool containsMushroom;
     public bool containsFireFlower;
+    public bool containsCoin;
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -33,6 +36,12 @@ public class BlockComponent : MonoBehaviour
         else if (containsFireFlower)
         {
             GameObject item = Instantiate(_fireFlowerPrefab, transform);
+        }
+        else if (containsCoin)
+        {
+            GameObject item = Instantiate(_coinPrefab, transform);
+            item.GetComponent<CoinComponent>().GetCoin();  
+            
         }
     }
 }

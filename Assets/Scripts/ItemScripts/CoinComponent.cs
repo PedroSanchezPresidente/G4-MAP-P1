@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CoinComponent : MonoBehaviour
 {
+
+    public void GetCoin()
+    {
+        GameManager.Instance.OnPickCoin();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

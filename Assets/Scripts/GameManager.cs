@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour
     private int _points;
     public int _lifes = 3;
     private float _remainingTime;
-    private int _coins;
+    private int _coins = 0;
 
     #endregion
+
     #region Methods
     private void Awake()
     {
@@ -47,9 +48,11 @@ public class GameManager : MonoBehaviour
             _UIManager = uiManager;
         }
     }
-    private void OnPickCoin()
+    public void OnPickCoin()
     {
-
+        Debug.Log(_coins);
+        _coins++;
+        Debug.Log(_coins);
     }
     private void EnterState(GameStates newState)
     {
