@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     #region references
     private UIManager _UIManager;
+    private SoundManager _soundManager;
 
     [SerializeField] GameObject _player;
     #endregion
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     }
     private void OnPickCoin()
     {
-
+        _soundManager.AudioSelection(13, 0.6f);
     }
     private void EnterState(GameStates newState)
     {
@@ -63,6 +64,10 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStates.START:
             case GameStates.GAMEOVER:
+                if (_lifes == 0)
+                {
+                    _soundManager.AudioSelection(12, 0.8f);
+                }                             
                 break;
         }
     }
@@ -119,6 +124,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _soundManager = SoundManager.Instance;
         _remainingTime = 400;
         _nextState = GameStates.GAME;
         _currentState = GameStates.START;

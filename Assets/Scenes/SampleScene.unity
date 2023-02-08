@@ -11310,6 +11310,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2024171444}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 624498c78ca8a194392e90a84f4ed047, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1265063604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13268,6 +13280,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2ab9c3e7faa03e44b0d979ddf523df3, type: 3}
   - {fileID: 8300000, guid: 1b9c50fc3cff92649973232db9b6940f, type: 3}
   - {fileID: 8300000, guid: dc2a1c3e2bd68304f831d0664cd6b017, type: 3}
+  - {fileID: 8300000, guid: 624498c78ca8a194392e90a84f4ed047, type: 3}
+  - {fileID: 8300000, guid: 7eede9e0c97fdd94c96bab01a51c1518, type: 3}
+  - {fileID: 8300000, guid: 61bb3d2c25d76c44fab6ba1fdf8a6c47, type: 3}
+  - {fileID: 8300000, guid: bf03bd4aa30715348a3883fee8b5ce7e, type: 3}
+  - {fileID: 8300000, guid: 872e6ff798340da4ba933e3e1abdb304, type: 3}
 --- !u!4 &2024171443
 Transform:
   m_ObjectHideFlags: 0

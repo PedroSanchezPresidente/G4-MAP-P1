@@ -18,4 +18,8 @@ public class SoundManager : MonoBehaviour
     {
         _controlAudio.PlayOneShot(_audios[index], volume);
     }
+    public void StopAudio()
+    {
+        _controlAudio.Stop();
+    }
 }
