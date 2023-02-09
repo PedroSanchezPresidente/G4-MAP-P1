@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6064084954095407245}
   - component: {fileID: 6064084954095407282}
   - component: {fileID: 6011152012789384451}
+  - component: {fileID: 4492471323361099817}
   m_Layer: 8
   m_Name: FireBallRight
   m_TagString: Untagged
@@ -147,7 +148,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8531c697a5c574b8ff15b9d0012f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bounciness: 15
+  _bounciness: 12
+--- !u!95 &4492471323361099817
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064084954095407283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd17caa680387a049aa7446af8d4ce3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6064084954494013276
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +215,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25728676, y: 0.01491753}
+  m_Offset: {x: 0.20031847, y: 0.002590701}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -205,7 +226,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08000487, y: 0.4254344}
+  m_Size: {x: 0.19394144, y: 0.45008805}
   m_EdgeRadius: 0
 --- !u!114 &6064084954494013278
 MonoBehaviour:
@@ -220,4 +241,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fireBall: {fileID: 6064084954095407283}
+  _explosion: {fileID: 2940612952769210534, guid: c9730bc056b48fd48bd7486db837e0a8, type: 3}
   right: 1
