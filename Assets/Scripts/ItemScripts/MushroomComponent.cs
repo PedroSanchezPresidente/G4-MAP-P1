@@ -20,8 +20,9 @@ public class MushroomComponent : MonoBehaviour
     {
         if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
         {
+            float Y = _itemRigidbody.velocity.y;
             _animator.enabled = false;
-            _itemRigidbody.velocity = new Vector2(-itemSpeed * Time.deltaTime, -itemSpeed * Time.deltaTime);
+            _itemRigidbody.velocity = new Vector2(itemSpeed , Y );
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

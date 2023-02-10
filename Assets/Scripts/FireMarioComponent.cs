@@ -9,7 +9,7 @@ public class FireMarioComponent : MonoBehaviour
     [SerializeField] private Transform _spawnPointLeft;
     [SerializeField] private GameObject _fireRight;
     [SerializeField] private GameObject _fireLeft;
-    [SerializeField] private float _speed;
+    [SerializeField] public float _speed;
     float _timer;
     float _timeToFire;
     private void Start()
