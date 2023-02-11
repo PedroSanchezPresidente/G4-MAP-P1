@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class CoinComponent : MonoBehaviour
 {
+    public Transform _coinSpawn;
+    public GameObject _coinPrefab;
+    [SerializeField]
+    public int _blockCoins;
 
+
+    
     public void GetCoin()
     {
-        GameManager.Instance.OnPickCoin();
-        //destruye el objeto despues de la animacion (+ un delay ???)
-        Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + 1);  
+        if (_blockCoins > 0)
+        {
+            _blockCoins--;
+            GameManager.Instance._coins++;
+            
+            if (_blockCoins == 0)
+            {
+                GetComponent<BlockComponent>().BlockIsActivated();
+            }
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

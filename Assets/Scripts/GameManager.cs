@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private int _points;
     public int _lifes = 3;
     private float _remainingTime;
-    private int _coins = 0;
+    public int _coins = 0;
 
     #endregion
 
@@ -48,9 +48,9 @@ public class GameManager : MonoBehaviour
             _UIManager = uiManager;
         }
     }
+   
     public void OnPickCoin()
     {
-        Debug.Log(_coins);
         _coins++;
         Debug.Log(_coins);
     }
@@ -91,10 +91,10 @@ public class GameManager : MonoBehaviour
                 {
                     _nextState = GameStates.GAMEOVER;
                 }
-                _UIManager.UpdateGameHUD(_remainingTime, _lifes);
+                _UIManager.UpdateGameHUD(_remainingTime, _lifes, _coins, _points );
                 break;
             case GameStates.RETRY:
-                _UIManager.UpdateGameHUD(_remainingTime, _lifes);
+                _UIManager.UpdateGameHUD(_remainingTime, _lifes, _coins, _points);
                 break;
             case GameStates.START:
 
