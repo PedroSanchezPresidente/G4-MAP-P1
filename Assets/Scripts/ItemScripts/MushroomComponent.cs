@@ -31,8 +31,8 @@ public class MushroomComponent : MonoBehaviour
             if (PlayerManager.Instance.CurrentState == PlayerManager.PlayerStates.PEQUEÑO)
             {
                 _soundManager.AudioSelection(1, 0.5f);
-                PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
                 GameManager.Instance.Experience(1000);
+                PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
                 Destroy(gameObject);
             }
             else

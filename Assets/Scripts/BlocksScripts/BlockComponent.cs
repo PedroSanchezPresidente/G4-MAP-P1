@@ -41,9 +41,10 @@ public class BlockComponent : MonoBehaviour
         }
         else if (containsCoin) 
         {
+            _animator.SetBool("IsActivated", isActivated);
             GetComponent<CoinComponent>().GetCoin();
             GameManager.Instance.Experience(200);
-            _animator.SetBool("IsActivated", isActivated);
+            
         }
         else
         {

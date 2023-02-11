@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private UIManager _UIManager;
 
     [SerializeField] GameObject _player;
+
     #endregion
 
     #region properties
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     public int _lifes = 3;
     private float _remainingTime;
     public int _coins = 0;
+
 
     #endregion
 
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void Experience(int _exp)
     {
-            _points += _exp;
+        _points += _exp;
     }
 
     private void EnterState(GameStates newState)
