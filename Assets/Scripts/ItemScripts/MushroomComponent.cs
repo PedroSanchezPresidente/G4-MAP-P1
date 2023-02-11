@@ -32,6 +32,7 @@ public class MushroomComponent : MonoBehaviour
             {
                 _soundManager.AudioSelection(1, 0.5f);
                 PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
+                GameManager.Instance.Experience(1000);
                 Destroy(gameObject);
             }
             else

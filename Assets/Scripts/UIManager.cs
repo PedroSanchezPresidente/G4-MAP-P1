@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
         _lifes.text = lifes.ToString();
-        _coins.text = _currentCoins.ToString();
+        _coins.text = "x" + _currentCoins.ToString();
         _points.text = _currentPoints.ToString();
     }
 

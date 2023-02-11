@@ -6,7 +6,6 @@ public class BlockComponent : MonoBehaviour
 {
     [SerializeField]
     private GameObject _prefab;
-
     [SerializeField]
     private GameObject _mushroomPrefab;
     [SerializeField]
@@ -43,6 +42,8 @@ public class BlockComponent : MonoBehaviour
         else if (containsCoin) 
         {
             GetComponent<CoinComponent>().GetCoin();
+            GameManager.Instance.Experience(200);
+            _animator.SetBool("IsActivated", isActivated);
         }
         else
         {

@@ -15,10 +15,12 @@ public class KillEnemy : MonoBehaviour
 
             if (gameObject.tag == "Goomba") //si choca con bola de fuego
             {
+                GameManager.Instance.Experience(100);
                 gameObject.GetComponent<goombaComponent>().Death();
             }
             else if (gameObject.tag == "Koopa" )
             {
+                GameManager.Instance.Experience(200);
                 gameObject.GetComponent<KoopaComponent>().ShellDeath();
             }
         }

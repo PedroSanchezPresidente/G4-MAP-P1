@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private GameManager.GameStates _nextState;
     public GameManager.GameStates CurrentState { get { return _currentState; } }
-    private int _points;
+    public int _points = 0;
     public int _lifes = 3;
     private float _remainingTime;
     public int _coins = 0;
@@ -54,6 +54,12 @@ public class GameManager : MonoBehaviour
         _coins++;
         Debug.Log(_coins);
     }
+
+    public void Experience(int _exp)
+    {
+            _points += _exp;
+    }
+
     private void EnterState(GameStates newState)
     {
         _UIManager.SetMenu(newState);
