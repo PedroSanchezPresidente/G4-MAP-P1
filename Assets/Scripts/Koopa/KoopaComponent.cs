@@ -7,6 +7,7 @@ public class KoopaComponent : MonoBehaviour
     #region parameters
     public int speed;
     public bool sentido; // si el sentido es false el goomba se mueve a la izquierda, pero si esta en true se mueve a la derecha
+    public bool isInScene;
     #endregion
 
     #region references
@@ -21,22 +22,25 @@ public class KoopaComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isInScene = false;
         _animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update() // cambia el sentido del goomba en funcion del estado de la variable bool sentido
     {
-        if (sentido)
+        if (isInScene)
         {
-            transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            GetComponent<SpriteRenderer>().flipX = true;
+            if (sentido)
+            {
+                transform.Translate(2 * Time.deltaTime * speed, 0, 0);
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
         }
-        else
-        {
-            transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
