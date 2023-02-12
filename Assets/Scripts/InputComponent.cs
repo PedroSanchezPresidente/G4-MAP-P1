@@ -47,6 +47,6 @@ public class InputComponent : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetButtonUp("Circle"))
         {
             _movementComponent.StopSprint();
-        }*/
+        }
     }
 }
