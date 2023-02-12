@@ -5,17 +5,21 @@ using UnityEngine;
 public class WinAnimations : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private SoundManager _soundManager;
     private bool _toCastle = false;
 
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _soundManager = SoundManager.Instance;
     }
 
     public void winDown()
     {
+        _soundManager.StopAudio();
         _rigidbody2D.gravityScale = 0f;
-        _rigidbody2D.velocity = new Vector2(0, -3);
+        _rigidbody2D.velocity = new Vector2(0, -3);       
+        _soundManager.AudioSelection(15, 0.5f);
     }
 
     public void toCastle()
@@ -38,4 +42,5 @@ public class WinAnimations : MonoBehaviour
             _rigidbody2D.velocity = new Vector2(3, y);
         }
     }
+    
 }
