@@ -12,6 +12,14 @@ public class goombaComponent : MonoBehaviour
     
     
     // Start is called before the first frame update
+    void Start()
+    {
+        _soundManager = SoundManager.Instance;
+        if (speed < 0)
+        {
+            sentido = false;
+        }
+    }
 
     // Update is called once per frame
     void Update() // cambia el sentido del goomba en funcion del estado de la variable bool sentido
