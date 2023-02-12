@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class goombaComponent : MonoBehaviour
 {
+    [SerializeField]
     private SoundManager _soundManager;
     public int speed;
     
