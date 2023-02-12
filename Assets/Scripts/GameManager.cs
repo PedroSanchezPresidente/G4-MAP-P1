@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     private GameManager.GameStates _nextState;
     public GameManager.GameStates CurrentState { get { return _currentState; } }
     private int _points;
-    private int _lifes;
+    public int _lifes;
     private float _remainingTime;
     private int _coins;
 
