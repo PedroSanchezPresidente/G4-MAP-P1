@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class FloorFlagScript : MonoBehaviour
 {
+    [SerializeField]
+    private WinAnimations _player;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<WinAnimations>().toCastle();
+        _player.toCastle();
     }
 }
