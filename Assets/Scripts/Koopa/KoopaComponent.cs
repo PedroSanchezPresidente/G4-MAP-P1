@@ -6,7 +6,7 @@ public class KoopaComponent : MonoBehaviour
 {
     #region parameters
     public int speed;
-    private bool sentido; // si el sentido es false el goomba se mueve a la izquierda, pero si esta en true se mueve a la derecha
+    public bool sentido; // si el sentido es false el goomba se mueve a la izquierda, pero si esta en true se mueve a la derecha
     #endregion
 
     #region references
@@ -38,8 +38,15 @@ public class KoopaComponent : MonoBehaviour
         }
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
 
-        public void Death()
+        if (collision.gameObject.layer == LayerMask.NameToLayer("ScreenLimits"))
+        {
+            Death();
+        }
+    }
+    public void Death()
     {
         _animator.SetBool("killed", true);
         Destroy(gameObject);
