@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -83,12 +82,15 @@ public class PlayerManager : MonoBehaviour
             case PlayerStates.MUERTO:
                 GetComponent<MovementComponent>().enabled = false;
                 _animator.SetBool("isDead", true);
+                _soundManager.StopAudio();
                 _soundManager.AudioSelection(4, 0.5f);
+                GameManager.Instance.BajaVida();
                 if (GameManager.Instance._lifes > 0)
                 {
-                    GameManager.Instance.BajaVida();
                     GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
                 }
+                else
+                  GameManager.Instance.RequestStateChange(GameManager.GameStates.GAMEOVER);
                 GoToSpawn();
                 break;
         }

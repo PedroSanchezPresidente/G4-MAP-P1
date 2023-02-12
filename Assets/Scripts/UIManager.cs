@@ -14,16 +14,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text _remainingTime;
 
     //MENUS
-    [SerializeField] private GameObject _startMenu;
-    [SerializeField] private GameObject _gameplayHUD;
-    [SerializeField] private GameObject _retryMenu;
-    [SerializeField] private GameObject _gameOverMenu;
+    [SerializeField] private GameObject[] _menus;
     #endregion
 
     #region properties
     //array de distintos menus
-    private GameObject[] _menus;
+
     #endregion
+
     #region methods
     public void SetUpGameHUD(float remainingTime, int lifes)
     {
@@ -32,17 +30,19 @@ public class UIManager : MonoBehaviour
 
         _lifes.text = lifes.ToString();
     }
-    public void UpdateGameHUD(float remainingTime, int lifes)
+    public void UpdateGameHUD(float remainingTime, int lifes, int _currentCoins, int _currentPoints)
     {
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
-
         _lifes.text = lifes.ToString();
+        _coins.text = "x" + _currentCoins.ToString();
+        _points.text = _currentPoints.ToString();
     }
 
     public void RequestStateChange(int newState)
     {
         GameManager.Instance.RequestStateChange((GameManager.GameStates) newState);
+        SetMenu((GameManager.GameStates)newState);
     }
 
    
@@ -53,21 +53,12 @@ public class UIManager : MonoBehaviour
             _menus[i].SetActive(false);
         }
         _menus[(int)newMenu].SetActive(true);
-        if ((int)newMenu == 1) Debug.Log("GaemHUD");
-
     }
     #endregion
     private void Start()
     {
-        _menus = new GameObject[4];
-        _menus[(int)GameManager.GameStates.START] = _startMenu;
-        _menus[(int)GameManager.GameStates.GAME] = _gameplayHUD;
-        _menus[(int)GameManager.GameStates.RETRY] = _retryMenu;
-        _menus[(int)GameManager.GameStates.GAMEOVER] = _gameOverMenu;
         GameManager.Instance.RegisterUIManager(this);
     }
-
-
 
     /*
 

@@ -20,8 +20,9 @@ public class MushroomComponent : MonoBehaviour
     {
         if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
         {
+            float Y = _itemRigidbody.velocity.y;
             _animator.enabled = false;
-            _itemRigidbody.velocity = new Vector2(-itemSpeed * Time.deltaTime, -itemSpeed * Time.deltaTime);
+            _itemRigidbody.velocity = new Vector2(itemSpeed , Y );
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +32,7 @@ public class MushroomComponent : MonoBehaviour
             if (PlayerManager.Instance.CurrentState == PlayerManager.PlayerStates.PEQUEÑO)
             {
                 _soundManager.AudioSelection(1, 0.5f);
+                GameManager.Instance.Experience(1000);
                 PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.GRANDE);
                 Destroy(gameObject);
             }
