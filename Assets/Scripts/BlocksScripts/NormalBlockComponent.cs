@@ -5,10 +5,12 @@ using UnityEngine;
 public class NormalBlockComponent : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    [SerializeField]
+    private GameObject _prefab;
     private PlayerManager _playerManager;
     private GameObject _block;
     private SoundManager _soundManager;
+    private ActivateNormalBlock _normalBlock;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -18,6 +20,7 @@ public class NormalBlockComponent : MonoBehaviour
         if (_playerManager.CurrentState == _playerManager._basicState)
         {
             Debug.Log("Animacion");
+            _normalBlock.onHit();
         }
         else
         {
@@ -25,11 +28,15 @@ public class NormalBlockComponent : MonoBehaviour
             Destroy(_block);
         }
     }
-
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        _normalBlock.NoHit();
+    }
     void Start()
     {
         _soundManager = SoundManager.Instance;
         _block = transform.parent.gameObject;
+        _normalBlock = _prefab.GetComponent<ActivateNormalBlock>();
     }
 
     // Update is called once per frame

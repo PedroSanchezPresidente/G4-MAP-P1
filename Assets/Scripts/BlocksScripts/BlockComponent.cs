@@ -15,6 +15,7 @@ public class BlockComponent : MonoBehaviour
     public bool isActivated = false;
 
     public bool containsMushroom;
+    public bool contains1UP;
     public bool containsFireFlower;
     private void Start()
     {
@@ -30,7 +31,12 @@ public class BlockComponent : MonoBehaviour
             GameObject item = Instantiate(_mushroomPrefab, transform);
             item.GetComponent<MushroomComponent>().Begin();
         }
-        else if (containsFireFlower)
+        else if (contains1UP)
+        {
+            GameObject item = Instantiate(_mushroomPrefab, transform);
+            item.GetComponent<OneUPComponent>().Begin();
+        }
+        else if (containsFireFlower) 
         {
             GameObject item = Instantiate(_fireFlowerPrefab, transform);
         }
