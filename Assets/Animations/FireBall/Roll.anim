@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Walk
+  m_Name: Roll
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 644728294, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
+      value: {fileID: 1827009829, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
     - time: 0.083333336
-      value: {fileID: 680004859, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
+      value: {fileID: 225293122, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
     - time: 0.16666667
-      value: {fileID: 1071706410, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
+      value: {fileID: 1487128804, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
+    - time: 0.25
+      value: {fileID: -1168642580, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,15 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 644728294, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
-    - {fileID: 1071706410, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
-    - {fileID: 1071706410, guid: d2fae6107de617e4599ceab7371f7119, type: 3}
+    - {fileID: 1827009829, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
+    - {fileID: 225293122, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
+    - {fileID: 1487128804, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
+    - {fileID: -1168642580, guid: 4716ae4934d02054cb334dcfa62786d5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.18333334
+    m_StopTime: 0.26666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
