@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a3a0d6e0e1668ea48b788a989d6bd44a
+guid: ae0bf736b400d7b4387ec341a50cfcf0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 17
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,85 +104,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking goomba 1
+      name: moneditas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 476
-        width: 16
-        height: 16
+        x: 180
+        y: 473
+        width: 8
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c421d869e817e4d876b74291bc5996
-      internalID: -1471547002
+      spriteID: 99b2a753e205dbf47a8d113f1b50e500
+      internalID: 1617621273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking goomba 2
+      name: moneditas_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 476
-        width: 16
-        height: 17
+        x: 192
+        y: 473
+        width: 4
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9ddb14ff1f58ea4cba80847421f2c5b
-      internalID: -1957919512
+      spriteID: df949d1c602b4c64881f326cbb9d1463
+      internalID: 707204900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goomba chiquito
+      name: moneditas_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 476
-        width: 16
-        height: 8
+        x: 204
+        y: 473
+        width: 1
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65bc9ad909a51904c8fcb74d555ffd12
-      internalID: -112426777
+      spriteID: 967896f0ee61bda44a5aac8d8d021cdc
+      internalID: 347166279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goomba sprite sheet and other enemies_0
+      name: moneditas_3
       rect:
         serializedVersion: 2
-        x: 72
-        y: 374
-        width: 16
-        height: 18
+        x: 212
+        y: 473
+        width: 4
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24bde7cc0ffb2ae41a6601f804289a0c
-      internalID: 1221367271
+      spriteID: 9a84624e7a1fd5a46b392f67e191e55a
+      internalID: 208576146
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      goomba chiquito: -112426777
-      goomba sprite sheet and other enemies_0: 1221367271
-      walking goomba 2: -1957919512
-      walking goomba 1: -1471547002
+      moneditas_2: 347166279
+      moneditas_3: 208576146
+      moneditas_1: 707204900
+      moneditas_0: 1617621273
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

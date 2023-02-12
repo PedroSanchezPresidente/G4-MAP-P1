@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     //array de distintos menus
 
     #endregion
+
     #region methods
     public void SetUpGameHUD(float remainingTime, int lifes)
     {
@@ -29,12 +30,13 @@ public class UIManager : MonoBehaviour
 
         _lifes.text = lifes.ToString();
     }
-    public void UpdateGameHUD(float remainingTime, int lifes)
+    public void UpdateGameHUD(float remainingTime, int lifes, int _currentCoins, int _currentPoints)
     {
         int aux = (int)remainingTime;
         _remainingTime.text = aux.ToString();
-
         _lifes.text = lifes.ToString();
+        _coins.text = "x" + _currentCoins.ToString();
+        _points.text = _currentPoints.ToString();
     }
 
     public void RequestStateChange(int newState)
