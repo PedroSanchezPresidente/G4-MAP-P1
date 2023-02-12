@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour
         _setupEnemies = GetComponent<SetupEnemies>();
         _remainingTime = 400;
         _currentState = GameStates.START;
+        _soundManager.AudioSelection(10, 0.5f);
     }
 
     // Update is called once per frame
