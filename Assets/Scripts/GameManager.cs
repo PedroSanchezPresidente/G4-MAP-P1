@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
         _remainingTime = 400;
         _nextState = GameStates.GAME;
         _currentState = GameStates.START;
+        _soundManager.AudioSelection(10, 0.5f);
     }
 
     // Update is called once per frame
