@@ -11268,7 +11268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _distance: 0
   _verticalOffset: 2
-  _horizontalOffset: -13.5
+  _horizontalOffset: -8.5
   _targetTransform: {fileID: 1659911652}
   _cameraTransform: {fileID: 519420032}
 --- !u!114 &1278625940
