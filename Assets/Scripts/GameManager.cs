@@ -55,6 +55,13 @@ public class GameManager : MonoBehaviour
    
     public void OnPickCoin()
     {
+        _coins++;
+        Debug.Log(_coins);
+    }
+
+    public void Experience(int _exp)
+    {
+        _points += _exp;
         _soundManager.AudioSelection(13, 0.6f);
     }
 
