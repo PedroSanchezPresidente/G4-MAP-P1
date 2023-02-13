@@ -13,6 +13,12 @@ public class BlockComponent : MonoBehaviour
     [SerializeField]
     //private GameObject _coinPrefab;
     private Animator _animator;
+    [SerializeField] 
+    private GameObject _coinPrefab;
+
+    [SerializeField]
+    public int _blockCoins;
+
     public bool isActivated = false;
 
     public bool containsMushroom;
@@ -28,27 +34,34 @@ public class BlockComponent : MonoBehaviour
     {
         //isActivated = true;
         _animator.SetBool("IsActivated", isActivated);
+
         if (containsMushroom)
         {
             GameObject item = Instantiate(_mushroomPrefab, transform);
             item.GetComponent<MushroomComponent>().Begin();
+            GameManager.Instance.Experience(200);
             BlockIsActivated();
         }
         else if (containsFireFlower)
         {
             GameObject item = Instantiate(_fireFlowerPrefab, transform);
+            GameManager.Instance.Experience(200);
             BlockIsActivated();
         }
         else if (containsCoin) 
         {
-            _animator.SetBool("IsActivated", isActivated);
-            GetComponent<CoinComponent>().GetCoin();
-            GameManager.Instance.Experience(200);
-            
-        }
-        else
-        {
-            BlockIsActivated();
+            if (_blockCoins > 0)
+            {
+                GameObject item = Instantiate(_coinPrefab, transform.position , Quaternion.identity);
+                GameManager.Instance.OnPickCoin();
+                GameManager.Instance.Experience(200);
+                _blockCoins--;
+
+                if (_blockCoins == 0)
+                {
+                    BlockIsActivated();
+                }
+            }
         }
     }
 
