@@ -27,7 +27,10 @@ public class ShellComponent : MonoBehaviour
             _transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
         }
     }
-
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
 
     #endregion
 
@@ -35,6 +38,7 @@ public class ShellComponent : MonoBehaviour
     void Start()
     {
         _transform = GetComponent<Transform>();
+        speed = 0;
     }
 
     // Update is called once per frame

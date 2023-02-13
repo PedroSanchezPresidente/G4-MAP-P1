@@ -7,7 +7,7 @@ public class MovementGoomba : MonoBehaviour
     [SerializeField] private goombaComponent _goombaComponent;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bloques"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bloques") || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             if (_goombaComponent.sentido)
             {

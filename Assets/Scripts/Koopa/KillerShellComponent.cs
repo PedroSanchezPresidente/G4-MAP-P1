@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class KillerShellComponent : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private ShellComponent _shellComponent;
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player") //evalua si choca con mario
+        if (other.gameObject.tag == "Player" && _shellComponent.speed == 4 || _shellComponent.speed == -4) //evalua si choca con mario
         {
             PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.MUERTO);
         }
-        else if (other.gameObject.tag == "Goomba")
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") && _shellComponent.speed != 0)
         {
-            other.GetComponent<goombaComponent>().Death();
+            Destroy(other.gameObject);
         }
-        else if (other.gameObject.tag == "Koopa")
+        else if (other.gameObject.layer == LayerMask.NameToLayer("ScreenLimits"))
         {
-            other.GetComponent<KoopaComponent>().Death();
+            _shellComponent.Death();
         }
     }
 }
