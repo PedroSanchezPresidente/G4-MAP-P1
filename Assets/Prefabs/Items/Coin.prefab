@@ -95,7 +95,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6813197995354888308, guid: dfc278492d59ab440b235da5f8b80eb8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dfc278492d59ab440b235da5f8b80eb8, type: 3}
 --- !u!4 &39380269668420045 stripped
 Transform:

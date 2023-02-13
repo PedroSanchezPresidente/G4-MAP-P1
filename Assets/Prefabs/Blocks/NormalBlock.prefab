@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b32a6fa946aa264eb38231f1a6bd575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _borkenBlockPrefab: {fileID: 3300102547324501321, guid: 9de701f3e5b4846498c38ba176f2d757, type: 3}
 --- !u!1 &6288598452299624503
 GameObject:
   m_ObjectHideFlags: 0
