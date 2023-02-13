@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3904860691474734176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShellSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3904860692710038902}
   - component: {fileID: 3904860692710038903}
   - component: {fileID: 1123803582564414468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.36732054}
+  m_Offset: {x: -0.0056336224, y: -0.44387376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -89,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9174588}
+  m_Size: {x: 1.0187783, y: 0.7643523}
   m_EdgeRadius: 0
 --- !u!114 &3904860692710038903
 MonoBehaviour:
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3904860692865112061}
   - component: {fileID: 3904860692865111939}
   - component: {fileID: 7255106588621150408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: koopa
   m_TagString: Koopa
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000074505806, y: -0.17938161}
+  m_Offset: {x: -0.000000059604645, y: -0.2596954}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -232,7 +232,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8910687, y: 1.0513389}
+  m_Size: {x: 0.8910687, y: 0.8907113}
   m_EdgeRadius: 0
 --- !u!50 &3904860692865112063
 Rigidbody2D:
@@ -268,7 +268,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030460596, y: 0.48706672}
+  m_Offset: {x: -0.00060500205, y: 0.42192703}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -279,7 +279,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61948395, y: 0.2669806}
+  m_Size: {x: 0.8963274, y: 0.4623996}
   m_EdgeRadius: 0
 --- !u!114 &3904860692865112061
 MonoBehaviour:
