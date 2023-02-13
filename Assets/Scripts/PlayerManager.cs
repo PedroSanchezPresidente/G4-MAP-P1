@@ -62,25 +62,23 @@ public class PlayerManager : MonoBehaviour
         switch (newState)
         {
             case PlayerStates.PEQUEÑO:
-                _animator.SetBool("Fire", false);
-                _animator.SetBool("Big", false); 
+                _animator.SetBool("Mini", true);
                 break;
             case PlayerStates.GRANDE:
-                _animator.SetBool("Fire", false);
                 _animator.SetBool("Big", true);
                 break;
             case PlayerStates.FUEGO:
-                _animator.SetBool("Fire", true);
                 _animator.SetBool("Big", true);
+                _animator.SetBool("Flower", true);
                 //intanciar sprite fuego
                 //Activar script Lanza Fuego
                 break;
             case PlayerStates.ESTRELLA:
+                _animator.SetBool("Star", true);
                 //invencibilidad (desactivar script killPlayer y activar el script killEnemyStar)
                 GetComponent<KillPlayerComponent>().enabled = false;
                 break;
             case PlayerStates.MUERTO:
-                GetComponent<MovementComponent>().enabled = false;
                 _animator.SetBool("isDead", true);
                 _soundManager.StopAudio();
                 _soundManager.AudioSelection(4, 0.5f);
@@ -94,29 +92,36 @@ public class PlayerManager : MonoBehaviour
                 GoToSpawn();
                 break;
         }
-        
+
     }
     private void ExitState(PlayerStates state)
     {
         switch (state)
         {
             case PlayerStates.PEQUEÑO:
-                
+                _animator.SetBool("Mini", false);
                 break;
             case PlayerStates.GRANDE:
-                //activar animacion de hacerse pequeño
+                _animator.SetBool("Big", false);
                 break;
             case PlayerStates.FUEGO:
-                //activar animacion de FireMario
-                //Activar script Lanza Fuego
+                _animator.SetBool("Flower", false);
                 break;
             case PlayerStates.ESTRELLA:
-                //invencibilidad (desactivar script killPlayer y activar el script killEnemyStar)
-                this.GetComponent<KillPlayerComponent>().enabled = true;
+                _animator.SetBool("Star", false);
                 break;
-            case PlayerStates.MUERTO:
+                /*case PlayerStates.MUERTO:
 
-                break;
+                    //activar animacion de muerte
+                    Destroy(gameObject);
+                    //comprobar si las vidas
+                    //if > 0, vidas--;
+                    //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
+
+
+                    _diedMario.GetComponent<DyingMarioComponent>().DieJump();
+                    //llamar al GameManager para deshabilitar scripts
+                    break;*/
         }
     }
     #endregion

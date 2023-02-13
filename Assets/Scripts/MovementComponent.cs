@@ -57,7 +57,12 @@ public class MovementComponent : MonoBehaviour
         _isRunning = false;
         animator.SetBool("keyPressed", _isRunning);
         _maxSpeed = 5;
-    } 
+    }
+
+    public void Squat(bool squat)
+    {
+        animator.SetBool("isSquatting", squat);
+    }
 
     //Impulso inicial del salto
     public void Jump()
