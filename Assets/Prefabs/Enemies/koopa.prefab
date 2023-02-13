@@ -295,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   sentido: 0
+  isInScene: 0
   _caparazon: {fileID: 8001919685389413097, guid: fed5f8487f400a64c92af74880a72914, type: 3}
   _shellSpawn: {fileID: 3904860691474734176}
 --- !u!95 &3904860692865111939

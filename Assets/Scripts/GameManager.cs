@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     #region references
     private UIManager _UIManager;
     private SoundManager _soundManager;
+    private SetupEnemies _setupEnemies;
 
     [SerializeField] GameObject _player;
+
     #endregion
 
     #region properties
@@ -19,16 +21,18 @@ public class GameManager : MonoBehaviour
 
     static public GameManager Instance { get { return _instance; } }
 
-    private GameManager.GameStates _currentState;
+    [SerializeField] private GameManager.GameStates _currentState;
 
     private GameManager.GameStates _nextState;
     public GameManager.GameStates CurrentState { get { return _currentState; } }
-    private int _points;
+    public int _points = 0;
     public int _lifes = 3;
     private float _remainingTime;
-    private int _coins;
+    public int _coins = 0;
+
 
     #endregion
+
     #region Methods
     private void Awake()
     {
@@ -48,19 +52,28 @@ public class GameManager : MonoBehaviour
             _UIManager = uiManager;
         }
     }
-    private void OnPickCoin()
+   
+    public void OnPickCoin()
     {
+        _coins++;
+        Debug.Log(_coins);
+    }
+
+    public void Experience(int _exp)
+    {
+        _points += _exp;
         _soundManager.AudioSelection(13, 0.6f);
     }
+
     private void EnterState(GameStates newState)
     {
         _UIManager.SetMenu(newState);
         switch (newState)
         {
             case GameStates.GAME:
-                Debug.Log("GAME");
                 _UIManager.SetUpGameHUD(_remainingTime, _lifes);
-                PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.PEQUEÑO);
+                _setupEnemies.StartEnemies();
+                PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.PEQUEÃ‘O);
                 break;
             case GameStates.START:
             case GameStates.GAMEOVER:
@@ -93,13 +106,15 @@ public class GameManager : MonoBehaviour
                 {
                     _nextState = GameStates.GAMEOVER;
                 }
-                _UIManager.UpdateGameHUD(_remainingTime, _lifes);
+                _UIManager.UpdateGameHUD(_remainingTime, _lifes, _coins, _points );
                 break;
             case GameStates.RETRY:
-                _UIManager.UpdateGameHUD(_remainingTime, _lifes);
+                _UIManager.UpdateGameHUD(_remainingTime, _lifes, _coins, _points);
                 break;
             case GameStates.START:
-
+                //_player.active = true;
+                //_player.GetComponent<PlayerManager>().GoToSpawn();
+                break;
             case GameStates.GAMEOVER:
                 break;
         }
@@ -116,18 +131,15 @@ public class GameManager : MonoBehaviour
         
     } 
 
-
-
-
-    
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         _soundManager = SoundManager.Instance;
+        _setupEnemies = GetComponent<SetupEnemies>();
         _remainingTime = 400;
-        _nextState = GameStates.GAME;
         _currentState = GameStates.START;
+        //_soundManager.AudioSelection(10, 0.5f);
     }
 
     // Update is called once per frame
