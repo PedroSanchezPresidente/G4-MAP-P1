@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class KillPlayerComponent : MonoBehaviour

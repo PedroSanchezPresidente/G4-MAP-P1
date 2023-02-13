@@ -26,6 +26,7 @@ public class MovementComponent : MonoBehaviour
     private Animator animator;
     private SpriteRenderer _spriteRenderer;
 
+
     #region Methods
     public void Left()
     {

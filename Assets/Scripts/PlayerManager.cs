@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -53,7 +52,7 @@ public class PlayerManager : MonoBehaviour
     {
         _nextState = nextState;
     }
-    private void GoToSpawn()
+    public void GoToSpawn()
     {
         this.transform.position = _spawn.transform.position;
         _camera.ResetCamera();
@@ -81,14 +80,16 @@ public class PlayerManager : MonoBehaviour
                 break;
             case PlayerStates.MUERTO:
                 _animator.SetBool("isDead", true);
-                Destroy(gameObject);
-                //comprobar si las vidas
-                //if > 0, vidas--;
-                //else llamar función GameOver que desactiva todos los scripts en ejecucion (input) y se pone el texto GameOver
-
-
-                _diedMario.GetComponent<DyingMarioComponent>().DieJump();
-                //llamar al GameManager para deshabilitar scripts
+                _soundManager.StopAudio();
+                _soundManager.AudioSelection(4, 0.5f);
+                GameManager.Instance.BajaVida();
+                if (GameManager.Instance._lifes > 0)
+                {
+                    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
+                }
+                else
+                  GameManager.Instance.RequestStateChange(GameManager.GameStates.GAMEOVER);
+                GoToSpawn();
                 break;
         }
 

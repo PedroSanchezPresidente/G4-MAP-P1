@@ -9,6 +9,9 @@ public class NormalBlockComponent : MonoBehaviour
     private PlayerManager _playerManager;
     private GameObject _block;
     private SoundManager _soundManager;
+    [SerializeField]
+    private GameObject _borkenBlockPrefab;
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,7 +25,10 @@ public class NormalBlockComponent : MonoBehaviour
         else
         {
             _soundManager.AudioSelection(7, 0.8f);
+            Instantiate(_borkenBlockPrefab, transform.position, Quaternion.identity);
             Destroy(_block);
+
+            
         }
     }
 
