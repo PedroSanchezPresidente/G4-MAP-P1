@@ -84,12 +84,13 @@ public class PlayerManager : MonoBehaviour
                 _animator.SetBool("isDead", true);
                 _soundManager.StopAudio();
                 _soundManager.AudioSelection(4, 0.5f);
-                //if (GameManager.Instance._lifes > 0)
-                //{
-                //    GameManager.Instance.BajaVida();
-                //    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
-                //}
-                GameManager.Instance.RequestStateChange(GameManager.GameStates.GAMEOVER);
+                GameManager.Instance.BajaVida();
+                if (GameManager.Instance._lifes > 0)
+                {
+                    GameManager.Instance.RequestStateChange(GameManager.GameStates.RETRY);
+                }
+                else
+                  GameManager.Instance.RequestStateChange(GameManager.GameStates.GAMEOVER);
                 GoToSpawn();
                 break;
         }

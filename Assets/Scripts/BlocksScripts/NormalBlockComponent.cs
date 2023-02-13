@@ -11,6 +11,7 @@ public class NormalBlockComponent : MonoBehaviour
     private SoundManager _soundManager;
 
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _playerManager = collision.gameObject.GetComponent<PlayerManager>();

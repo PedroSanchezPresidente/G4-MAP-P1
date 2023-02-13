@@ -11,6 +11,7 @@ public class FireFlowerComponent : MonoBehaviour
         {
             _soundManager.AudioSelection(1, 0.5f);
             PlayerManager.Instance.ChangeState(PlayerManager.PlayerStates.FUEGO);
+            GameManager.Instance.Experience(1000);
             Destroy(gameObject);
         }
     }
