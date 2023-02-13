@@ -36,6 +36,14 @@ public class InputComponent : MonoBehaviour
             _movementComponent.Left();
 
         }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _movementComponent.Squat(true);
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            _movementComponent.Squat(false);
+        }
 
         // Sitema de correr y disparar
         if (Input.GetKeyDown(KeyCode.LeftControl))
