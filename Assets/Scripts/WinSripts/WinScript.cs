@@ -10,6 +10,7 @@ public class WinScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameManager.Instance.Experience(1000);
         collision.gameObject.GetComponent<InputComponent>().enabled = false;
         collision.gameObject.GetComponent<MovementComponent>().enabled = false;
         collision.gameObject.GetComponent<WinAnimations>().winDown();

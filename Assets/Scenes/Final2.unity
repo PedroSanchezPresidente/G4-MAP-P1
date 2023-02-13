@@ -965,7 +965,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &375027823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7889,6 +7889,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 61bb3d2c25d76c44fab6ba1fdf8a6c47, type: 3}
   - {fileID: 8300000, guid: bf03bd4aa30715348a3883fee8b5ce7e, type: 3}
   - {fileID: 8300000, guid: 872e6ff798340da4ba933e3e1abdb304, type: 3}
+  - {fileID: 8300000, guid: a5e7d915763e96a48aa1f05a5eacf250, type: 3}
+  - {fileID: 8300000, guid: 6ecafa9e72790bf45a08dee36e0ef679, type: 3}
 --- !u!4 &2024171443
 Transform:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ public class PlayerManager : MonoBehaviour
     {
         _nextState = nextState;
     }
-    private void GoToSpawn()
+    public void GoToSpawn()
     {
         this.transform.position = _spawn.transform.position;
         _camera.ResetCamera();
