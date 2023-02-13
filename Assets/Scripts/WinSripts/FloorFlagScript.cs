@@ -14,6 +14,7 @@ public class FloorFlagScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        _player.gameObject.GetComponent<MovementComponent>().GroundedAnim();
         _soundManager.AudioSelection(16, 0.5f);
         _player.toCastle();
     }

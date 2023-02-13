@@ -14,7 +14,7 @@ public class EndScript : MonoBehaviour
 
     private void cambiarScena()
     {
-        SceneManager.LoadScene("Final2", LoadSceneMode.Single);
+        SceneManager.LoadScene("UIScene + Coins", LoadSceneMode.Single);
         //GameManager.Instance.RequestStateChange(GameManager.GameStates.START);
     }
 }

@@ -103,4 +103,9 @@ public class MovementComponent : MonoBehaviour
             _rigidbody2D.AddForce(Vector2.down * _downforce, ForceMode2D.Impulse);
         }
     }
+
+    public void GroundedAnim()
+    {
+        animator.SetBool("onGround", true);
+    }
 }
